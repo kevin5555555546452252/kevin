@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+		crossorigin="anonymous"></script>
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			background-color: #ECECFF;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		@media screen and (min-width: 1280px) {
+			.container {
+				width: 1280px;
+			}
+		}
+
+		header {
+			padding-left: 0 !important;
+			background-color: blue;
+			height: 200px;
+		}
+
+		.logo {
+			background-color: blue;
+		}
+
+		.logo img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		.nav {
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.nav a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 30px;
+			font-size: 16px;
+		}
+
+		.nav ul {
+			width: 100%;
+		}
+
+		.nav li {
+			width: 100%;
+		}
+
+		.nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+
+		a {
+			color: #666;
+			text-decoration: none;
+		}
+
+		nav ul a:hover {
+			text-decoration: none;
+		}
+
+		.news li {
+			width: 25%;
+			float: left;
+			height: 128px;
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+
+		.news li a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: purple;
+			position: relative;
+			color: black;
+
+		}
+
+		.news li a img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.news li a p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .5);
+			font-size: 12px;
+			color: #fff;
+			width: 100%;
+			height: 41px;
+			margin-bottom: 0;
+			padding: 5px 10px;
+		}
+
+		.news li:nth-child(1) {
+			width: 50%;
+			height: 266px;
+
+		}
+
+		.news li:nth-child(1) p {
+			line-height: 41px;
+			font-size: 20px;
+			padding: 0 10px;
+		}
+
+		.publish {
+			border-top: 1px solid #ccc;
+		}
+
+		.pic {
+			margin-top: 10px;
+		}
+
+		.publish .row {
+			border-bottom: 1px solid #000;
+			padding: 10px 0px;
+		}
+
+		.pic img {
+			width: 100%;
+		}
+
+		.banner img {
+			width: 100%;
+			background-color: blue;
+		}
+
+		.hot {
+			border: 1px solid #ccc;
+			display: block;
+			margin-top: 20px;
+			padding: 0 20px 20px;
+		}
+
+		.hot span {
+			border-radius: 0;
+			margin-bottom: 20px;
+		}
+
+		.hot p {
+			font-size: 12px;
+		}
+
+		.logo span {
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			display: block;
+			text-align: center;
+		}
+
+		h4:hover {
+			border: 1px solid red;
+		}
+
+		h3:hover {
+			color: blue;
+		}
+
+		.search-form {
+			position: relative;
+		}
+
+		.search-form .btn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			box-shadow: none;
+			width: 70px;
+			padding: 6px;
+			border-radius: 0;
+			background-color: #FF5E52;
+			color: #fff;
+			opacity: .85;
+		}
+
+		@media screen and (max-width: 767px) {
+			.nav li a {
+				font-size: 14px;
+			}
+
+			.news li:nth-child(1) {
+				width: 100% !important;
+			}
+
+			.news li {
+				width: 50% !important;
+			}
+
+			.publish h3 {
+				font-size: 14px;
+			}
+
+			.publish p {
+				font-size: 10px;
+			}
+
+			form {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 991px) {
+			.nav li {
+				float: left;
+				width: 20%;
+			}
+
+			article {
+				margin-top: 10px;
+			}
+		}
+
+		.publish a p {
+			background-color: #8E8E8E;
+			text-align: center;
+			height: 50px;
+			padding-top: 10px;
+			font-size: 20px;
+			color: white;
+
+		}
+
+		.pink {
+			height: 300px;
+			width: 700px;
+			background-color: pink;
+			border-radius: 20px;
+		}
+
+		.orange {
+			background-color: #D2E9FF;
+			margin-top: 30px;
+			border-radius: 20px;
+			text-align: center;
+			opacity: 0.8;
+
+		}
+
+		footer {
+			padding-top: 50px;
+			padding-left: 40%;
+		}
+
+		header {
+			background-image: url(w644.jpg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<header coi-md-12>
+
+			</header>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">交通工具篇單字</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">單字</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">バス</h1><input type="checkbox" name="">
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>公車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>バスはゆつくり走ります</h5>
+						<h6>公車慢慢地行駛</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">電車（でんしゃ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>電車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6" style="word-wrap: break-word;">
+						<h5>電車に乗つて学校に通います</h5>
+						<p>坐電車上學</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">飛行機（ひこうき）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>飛機</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>飛行機で三時間です</h5>
+						<h6>搭飛機要3小時</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">自転車（じてんしゃ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>腳踏車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>自転車に乗れますか？</h5>
+						<h6>你會騎腳大車嗎?</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">タクシー</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>計程車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>空港から台北市までのタクシー代は千元ぐらいかかります</h5>
+						<h6>機場到台北市的計程車費約一千元左右</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">自動車（じどうしゃ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>汽車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>日曜日に自動車で海に行きました</h5>
+						<h6>星期日開車到海邊</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">地下鉄（ちかてつ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>地下鐵</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>地下鉄の西側の出口で待つています</h5>
+						<h6>我在地下鐵西側出口等你</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">オートバイ</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>摩托車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>オートバイで会社に行きます</h5>
+						<h6>騎摩托車上班</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">駅（えき）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>火車站</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>駅は遠いですか？</h5>
+						<h6>車站很遠嗎?</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">エスカレーター</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>自動手扶梯</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>エスカレーターに乗ります</h5>
+						<h6>搭乘手扶梯</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">道（みち）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>道路</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>通勤ラツシユのため道が込んでいます</h5>
+						<h6>因為現在是上下班時間,所以路上很塞</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">汽車（きしゃ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>汽車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>汽車の時刻表を持つていますか</h5>
+						<h6>你有待火車時刻表嗎?
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">チケット</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>車票</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>電車の中でチケットをなくしました</h5>
+						<h6>在電車裡把票弄丟了</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">急行（きゅうこう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>急行 快速</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>台北発の急行列車発台風のため、出発を見合わせています</h5>
+						<h6>台北出發的快車因颱風引響暫不發車</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">車（くるま）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>車子 輪子</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>この椅子には車がついています</h5>
+						<h6>這把椅子有輪子</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">駐車場（ちゅうしゃじょう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>停車場</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>量販店の駐車場はとても広々としています</h5>
+						<h6>量販店的停車場很寬敞</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">特急(とっきゅ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>特快車</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>特急でふるさとに帰ります</h5>
+						<h6>搭特快車返鄉</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">交差点（こうさてん）</h1><input type="checkbox" name="">
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>十字路口</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>交差点を右へ曲がります</h5>
+					<h6>十字路口右轉</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">空港（くうこう）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>飛機場</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6" style="word-wrap: break-word;">
+					<h5>空港まで友人を送りました</h5>
+					<p>送友人到機場</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">出発（しゅっほつ）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>出發</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-m主主-6">
+					<h5>次の便の出発時間はいつですか</h5>
+					<h6>下班飛機的出發時間是甚麼時候?
+					</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">交通（こうつう）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>交通</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>昔の交通はとても不便でした</h5>
+					<h6>以前的交通相當不便</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">交番（こうばん）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>派出所</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>拾つた財布を交番に届けました</h5>
+					<h6>將撿到的錢包交給了派出所</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">事故（じこ）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>事故</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>高速道路で起きた交通事故はひどいそうです</h5>
+					<h6>聽說高速公路發生的交通意外很嚴重</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">乗り物（のりもの）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>交通工具</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>今の乗り物は速くて便利です</h5>
+					<h6>現在的交通工具快又便利</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">運転（うんてん）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>駕駛</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>酒気帯び運転を避けて下さい</h5>
+					<h6>請避免酒後駕車</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">安全（あんぜん）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>安全的</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>安全なライディングするため、ライダーは安全運転の知識を身につけるはずだ</h5>
+					<h6>為了行車安全,機車騎士應具備交通安全常識</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">渡る（わたる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>度過 跨過</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>信号を無職したまま道を渡りました</h5>
+					<h6>不管紅綠燈便穿越馬路</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">送る（おくる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>送 贈送</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>空港まで送つていただけないんでしょうか</h5>
+					<h6>能請你送我到機場嗎?</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">止める（とめる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>停 關上</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>汽車の時刻表を持つていますか</h5>
+					<h6>私の家の前に車を止めるな
+					</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">乗り換える（のりかえる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>換乘 換車</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>東京駅で地下鉄に乗り換えてください</h5>
+					<h6>請在東京車站換搭地鐵</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">動く（うごく）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>動 移動 搖動</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5> 高速道路はトラックの横転事故のため、後ろの車が全然動けません</h5>
+					<h6>高速公路發生卡車翻覆意外,造成後面的車輛動彈不得</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">降りる（おりる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>下 降落 下車</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>車深い谷に降りました</h5>
+					<h6>車子掉落在山谷中</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">通う（かよう）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>往來</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>弟は毎日汽車で学校に通てますつ</h5>
+					<h6>弟弟每天搭火車上學</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">下がる（さがる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>下降 降底 向後退</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>まもなく電車が参ります。白線の内側にお下がりください</h5>
+					<h6>電車即將進站,請退至白線後方</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 style="text-align: center;">着く（つく）</h1>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<h3>中日文一起學</h3>
+			</div>
+			<div class="col-md-6">
+				<h5>到達 抵達</h5>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<h3>從例句學單字</h3>
+			</div>
+			<div class="col-md-6">
+				<h5> 汽車は定時に台北に着きました</h5>
+				<h6>火車準時抵達台北</h6>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">乗る（のる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>搭乘 騎</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>自転車に乗ります</h5>
+					<h6>騎腳踏車</h6>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">走る（はしる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>跑 車輛行駛</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>日本では車左側を走ります</h5>
+					<h6>日本的車輛在左邊行駛</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 style="text-align: center;">乗せる（のせる）</h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>中日文一起學</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>搭乘 乘載</h5>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>從例句學單字</h3>
+				</div>
+				<div class="col-md-6">
+					<h5>幼児に乗せるときは、チャイルドシートを使うべきです</h5>
+					<h6>搭載幼童時應該使用安全座椅</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+
+
+	<nav aria-label="Page navigation example">
+		<ul class="pagination">
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">4</a></li>
+			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <title>text online</title>
+    <style>
+        body {
+            background-color: #f0f0f0 !important;
+        }
+
+        @media screen and (min-width: 1280px) {
+            .container {
+                width: 1280px;
+                background-color: #BEBEBE;
+            }
+        }
+    </style>
+    <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+</head>
+<script language="javascript">
+    
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+  if(random(1, 100) > 10){
+     alert("大於10了");
+  }
+
+
+
+    function two_char(n) {
+        return n >= 10 ? n : "0" + n;
+    }
+    function time_fun() {
+        var sec = 0;
+        setInterval(function () {
+            sec++;
+            var date = new Date(0, 0)
+            date.setSeconds(sec);
+            var h = date.getHours(), m = date.getMinutes(), s = date.getSeconds();
+            document.getElementById("mytime").innerText = two_char(h) + ":" + two_char(m) + ":" + two_char(s);
+        }, 1000);
+    }
+
+    function main() {
+        var questionArray = new Array("Q1", "Q2", "Q3", "Q4", "Q5");
+        var resultArray = new Array();
+        var rightArray = new Array();
+
+        //aryAns[]是從後端返回的陣列,當點選交卷的時候,向後端請求正確答案的陣列,賦值給aryAns[]即可;
+        var aryAns = new Array(4, 3, 4, 3, 2);   //建立儲存正確答案的陣列
+        for (var i = 0; i < questionArray.length; i++) {
+            if (Name(questionArray[i]) != 10) {
+                resultArray[i] = Name(questionArray[i]);
+            } else {
+                alert("第" + (i + 1) + "題,您未作答!!");
+                return false;
+            }
+        }
+        var right_number = 0;//計算答對的題數；
+        for (var i = 0; i < questionArray.length; i++) {
+            if (aryAns[i] == resultArray[i]) {
+                right_number++;
+                rightArray[i] = 1;
+            } else {
+                rightArray[i] = 0;
+            }
+        }
+        var right_question = " ";
+        var error_question = " ";
+        for (var i = 0; i < rightArray.length; i++) {
+            if (rightArray[i] == 1) {
+                right_question += i + 1 + ",";
+            } else {
+                error_question += i + 1 + ",";
+            }
+        }
+        var time = document.getElementById("mytime").innerHTML;
+        document.getElementById("right_number").innerText = right_number;
+        document.getElementById("time").innerText = time;
+        if (right_question != " ") {
+            document.getElementById("right_question").innerText = right_question;
+
+        }
+        if (error_question != " ") {
+            document.getElementById("error_question").innerText = error_question;
+
+        }
+    };
+
+    function Name(name) {
+        var temp = document.getElementsByName(name);
+        var intHot = 9;
+        for (var i = 0; i < temp.length; i++) {
+            if (temp[i].checked)
+                intHot = temp[i].value;
+        }
+        if (intHot == 9) {
+            return 10;
+        }
+        return intHot;
+    };
+
+
+</script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand offset-sm-1" href="#">日文網</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">單字</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body onload="time_fun()" ; ">
+<div class=" container">
+    <center>
+        <font size="6" color="green"><b>線上檢測</b></font>
+        <h1>測試已開始 請開始作答 <span id="mytime">00:00:00</span></h1>
+
+    </center><br>
+    <hr>
+    <!--  下面表單將以post的方法，將資料傳遞給Text -->
+    <!-- 第一道題 -->
+    <p>1.在某次稅務檢查後，四個工商管理人員各自做出了結論。<br>
+        甲說;”所有個體戶都沒納稅。”。乙說：”服裝個體戶陳老闆沒納稅。”<br>
+        丙說：”個體戶不都沒稅”，丁說：”有的個體戶沒稅”<br>
+        如果四個人中只有一個斷定屬實，那麼以下哪項是真的？（）</p>
+    <p>
+        <input type="radio" name="Q1" value="1">丁斷定屬實，但陳老闆納了稅。<br>
+        <input type="radio" name="Q1" value="2">甲斷定屬實，陳老闆沒有納稅。<br>
+        <input type="radio" name="Q1" value="3">乙斷定屬實，陳老闆沒有納稅。<br>
+        <input type="radio" name="Q1" value="4">丙斷定屬實，但陳老闆沒有納稅。<br> <!-- D -->
+    </p>
+    <p>2.有A,B,C三個學生，一個出生在北京，一個出生在上海，一個出生在廣州。<br>
+        他們中一個學物理專業，一個學數學專業，一個學計算機。<br>
+        其中（1）A不是學物理的，B不是學計算機的；（2）學物理的不出生在上海；<br>
+        （3）學計算機的出生在北京；（4）B不出生在廣州。請根據上述條件，判斷A的專業（）。</p>
+    <p>
+        <input type="radio" name="Q2" value="1">物理<br>
+        <input type="radio" name="Q2" value="2">數學<br>
+        <input type="radio" name="Q2" value="3">計算機<br> <!-- C -->
+        <input type="radio" name="Q2" value="4">3種都有可能<br>
+    </p>
+    <p>3.杜麗去巴西出差，結果面板變黑了。<br>
+        杜麗去泰國出差，結果面板也變黑了。<br>
+        杜麗去新加坡出差，結果面板也變黑了。<br>
+        由此可知，杜麗一出差就會變黑。<br>
+        下面哪一個選項是對上述推理的恰當評價？</p>
+    <p>
+        <input type="radio" name="Q3" value="1">沒道理，因為可能杜麗面板本來就很黑<br>
+        <input type="radio" name="Q3" value="2">有道理，上述推理採用了求同法找因果關係<br>
+        <input type="radio" name="Q3" value="3">有道理，三次出差無一例外的都變黑，很能說明問題<br>
+        <input type="radio" name="Q3" value="4">沒道理，三次出差的地點都在熱帶，強烈光照是杜麗變黑我的主要原因<br> <!-- D -->
+    </p>
+    <p>4.一個長方體形狀的盒子長、寬、高分別為20釐米、8釐米和2釐米。<br>
+        現在要用一張紙將其六個面完全包裹起來，要求從紙上剪下的部分不得用作貼補<br>
+        請問這張紙的大小可能是下列哪一個?( )</p>
+    <p>
+        <input type="radio" name="Q4" value="1">長25cm，寬17cm<br>
+        <input type="radio" name="Q4" value="2">長26cm，寬14cm<br>
+        <input type="radio" name="Q4" value="3">長24cm，寬21cm<br> <!-- C -->
+        <input type="radio" name="Q4" value="4">長24cm，寬14cm<br>
+    </p>
+    <p>5.找規律 1, 32, 81, 64, 25, ( ), 1</p>
+    <p>
+        <input type="radio" name="Q5" value="1">5
+        <input type="radio" name="Q5" value="2">6
+        <!-- B -->
+        <input type="radio" name="Q5" value="3">10
+        <input type="radio" name="Q5" value="4">12
+    </p>
+    <button onclick="javascript:main();">交卷</button>
+    <h3>
+        五道題中您一共答對了<font color="red"><span id="right_number"></font>題，
+        花了<font color="red"><span id="time"></span></font>秒
+        <br>
+        正確的題目有:<span id="right_question" style="color:red"></span>
+        <br>
+        錯誤的題目有:<span id="error_question" style="color:red"></span>
+    </h3>
+    </div>
+</body>
+
+</html>

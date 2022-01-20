@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: #ECECFF;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 1280px) {
+            .container {
+                width: 1280px;
+            }
+        }
+
+        header {
+            padding-left: 0 !important;
+            background-color: blue;
+            height: 200px;
+        }
+
+        .logo {
+            background-color: blue;
+        }
+
+        .logo img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .nav {
+            background-color: #eee;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .nav a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 30px;
+            font-size: 16px;
+        }
+
+        .nav ul {
+            width: 100%;
+        }
+
+        .nav li {
+            width: 100%;
+        }
+
+        .nav a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        nav ul a:hover {
+            text-decoration: none;
+        }
+
+        .news li {
+            width: 25%;
+            float: left;
+            height: 128px;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        .news li a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: purple;
+            position: relative;
+            color: black;
+
+        }
+
+        .news li a img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .news li a p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .5);
+            font-size: 12px;
+            color: #fff;
+            width: 100%;
+            height: 41px;
+            margin-bottom: 0;
+            padding: 5px 10px;
+        }
+
+        .news li:nth-child(1) {
+            width: 50%;
+            height: 266px;
+
+        }
+
+        .news li:nth-child(1) p {
+            line-height: 41px;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+        .publish {
+            border-top: 1px solid #ccc;
+        }
+
+        .pic {
+            margin-top: 10px;
+        }
+
+        .publish .row {
+            border-bottom: 1px solid #000;
+            padding: 10px 0px;
+        }
+
+        .pic img {
+            width: 100%;
+        }
+
+        .banner img {
+            width: 100%;
+            background-color: blue;
+        }
+
+        .hot {
+            border: 1px solid #ccc;
+            display: block;
+            margin-top: 20px;
+            padding: 0 20px 20px;
+        }
+
+        .hot span {
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+
+        .hot p {
+            font-size: 12px;
+        }
+
+        .logo span {
+            color: #fff;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            display: block;
+            text-align: center;
+        }
+
+        h4:hover {
+            border: 1px solid red;
+        }
+
+        h3:hover {
+            color: blue;
+        }
+
+        .search-form {
+            position: relative;
+        }
+
+        .search-form .btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            box-shadow: none;
+            width: 70px;
+            padding: 6px;
+            border-radius: 0;
+            background-color: #FF5E52;
+            color: #fff;
+            opacity: .85;
+        }
+
+        @media screen and (max-width: 767px) {
+            .nav li a {
+                font-size: 14px;
+            }
+
+            .news li:nth-child(1) {
+                width: 100% !important;
+            }
+
+            .news li {
+                width: 50% !important;
+            }
+
+            .publish h3 {
+                font-size: 14px;
+            }
+
+            .publish p {
+                font-size: 10px;
+            }
+
+            form {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .nav li {
+                float: left;
+                width: 20%;
+            }
+
+            article {
+                margin-top: 10px;
+            }
+        }
+
+        .publish a p {
+            background-color: #8E8E8E;
+            text-align: center;
+            height: 50px;
+            padding-top: 10px;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .pink {
+            height: 300px;
+            width: 700px;
+            background-color: pink;
+            border-radius: 20px;
+        }
+
+        .orange {
+            background-color: #D2E9FF;
+            margin-top: 30px;
+            border-radius: 20px;
+            text-align: center;
+            opacity: 0.8;
+
+        }
+
+        footer {
+            padding-top: 50px;
+            padding-left: 40%;
+        }
+
+        header {
+            background-image: url(w644.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <header coi-md-12>
+
+            </header>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">咖啡篇單字</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">單字</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">コーラ</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>可樂</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>毎日コーラを飲みます</h5>
+                        <h6>每天喝可樂</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">紅茶（こうちゃ）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>紅茶</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>紅茶に牛乳を入れます</h5>
+                        <p>在紅茶中加入牛奶</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">コーヒー</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>咖啡</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>コーヒーえを飲むのが好きです</h5>
+                        <h6>喜歡喝咖啡</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">喫茶店（きつさてん）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>咖啡店 茶館</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>喫茶店で話しましょう</h5>
+                        <h6>我們在咖啡廳聊天吧</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">飲み物（のみもの）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>飲料</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>飲み物はアイスコーヒーになさいますか、ジュースになさいますか</h5>
+                        <h6>您的飲料要冰咖啡或果汁?</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">お酒（おさけ）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>酒</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>父はお酒を飲みません
+                        </h5>
+                        <h6>爸爸不喝酒
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">熱い（あつい）</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>(溫度)熱的 熱心的</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>熱いお茶です。どうぞ</h5>
+                        <h6>這是熱茶,請用</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">苦い（にがい）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>苦的</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>父の入れたお茶は苦くて濃いです</h5>
+                        <p>爸爸泡的茶又苦又濃</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">いかが</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>如何 怎樣</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>コーヒーはいかがですか？</h5>
+                        <h6>要不要來杯咖啡呢?
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">まずい</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>不好吃的 不好的</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>あの喫茶店のコーヒーはまずいです</h5>
+                        <h6>哪間咖啡廳的咖啡很難喝</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">薄い（うすい）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>薄的 淺的
+                        </h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>この辞書は薄いですね</h5>
+                        <h6>這本字典好薄喔</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">濃い（こい）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>濃的 濃厚的</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>この濃厚なスープは濃い方が美味しいと思います</h5>
+                        <h6>我覺得這碗濃湯再調濃一點會更好喝
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">入れる（いれる）</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>放進 加進 包括 泡茶</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>財布に一万円札を二枚入れます</h5>
+                        <h6>把兩張一萬元的鈔票放進錢包</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">くれる</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>給予</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>ビールを一本くれない？</h5>
+                        <p>可以給我一瓶酒嗎?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">冷やす（ひやす）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>冷卻 冷靜</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>冷蔵庫の中に一時間ほど冷やしたビールの味が一番美味しいです</h5>
+                        <h6>冰過約一小時的啤酒味道最棒</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">漬ける（つける）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>浸泡 醃漬</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>梅の水気をきつて、酒に一カ月ぐらい漬けて置きます</h5>
+                        <h6>濾乾梅子的水氣之後,放入酒裡浸泡一個月</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">飲む（のむ）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>喝</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>お巡りさんに道を聞きました</h5>
+                        <h6>ワインを飲みます</h6>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

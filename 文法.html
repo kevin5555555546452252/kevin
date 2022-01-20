@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="turn.min.js"></script>
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color:#FFD9EC;
+		}
+		.container {
+			background-color:	#FFFFF4;
+		}
+		.one{
+			background-color: #E0E0E0;
+			border-color:#000000;
+			
+		}
+		.two{
+			background-color: #E0E0E0;
+		}
+		.three{
+			background-color: #E0E0E0;
+		}
+		.four{
+			background-color:#E0E0E0; 
+		}
+		h1{
+			font-size: 30px;
+			text-align: center;
+			height:100px;
+			width:80px;
+			border-radius:20px;
+			background-color:blue;
+			padding-top:30px;
+			font-size:30px;
+			color:#FFFFFF;
+			margin:20px;
+			
+		}
+		h2{
+		padding-top:25px;
+		}
+	
+		header{
+			background-image: url(unnamed.jpg);
+			padding-left: 0 !important;
+			background-color: blue;
+			
+		}
+		header {
+			height: 200px;
+		}
+     	form {
+				display: none;
+			}
+		}
+		header{
+			background-image: url(unnamed.jpg);
+		}
+		div ul li:hover{
+			background-color: #E8FFC4;
+		}
+		footer{
+			background-color: #FFC1E0;
+			height: 100px;
+		}
+		.flipbook_IDname{
+          border-color: red;
+		}
+		p {
+		background-color:#C4E1FF;
+		height:100px;
+		}
+		.bluespan{
+		height:400px;
+		background-color:#DDDDFF;
+		border-color:#000000;
+        border-radius:20px; 
+        height:400px;
+        margin-top:30px;		
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+<div class="container">
+<div class="row">
+			<header class="col-md-12">
+				
+			</header>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">文法篇</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">單字</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="flipbook_IDname">
+ <div class="hard">
+ 	
+ </div>
+
+ <div class="hard">
+ 	
+ </div>
+
+ <div class="one border border-secondary">
+ <div class="row">
+ 	<h1 class="col-sm-2">1</h1>
+	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
+ </div>
+ <div class="row">
+ 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
+形容動詞中止形連接前後句子。
+鈴木さんはきれいでやさしいです。
+鈴木小姐既漂亮又温柔。
+部屋は静かで、リビングは賑やかです。
+房間很安靜，客廳很熱鬧。
+先生が親切で、いつも先生に相談します。
+老師很親切，我總是找老師商量。</p>
+<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
+ </div>
+ <div class="bluespan col-sm-10 offset-sm-1"></div>	
+ </div>
+
+ <div class="two border border-secondary">
+ <div class="row">
+ 	<h1 class="col-sm-3">1</h1>
+	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
+ </div>
+ <div class="row">
+ 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
+形容動詞中止形連接前後句子。
+鈴木さんはきれいでやさしいです。
+鈴木小姐既漂亮又温柔。
+部屋は静かで、リビングは賑やかです。
+房間很安靜，客廳很熱鬧。
+先生が親切で、いつも先生に相談します。
+老師很親切，我總是找老師商量。</p>
+<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
+ </div>
+ <div class="bluespan col-sm-10 offset-sm-1"></div>	
+ </div>
+
+ <div class="three border border-secondary">
+ <div class="row">
+ 	<h1 class="col-sm-3">1</h1>
+	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
+ </div>
+ <div class="row">
+ 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
+形容動詞中止形連接前後句子。
+鈴木さんはきれいでやさしいです。
+鈴木小姐既漂亮又温柔。
+部屋は静かで、リビングは賑やかです。
+房間很安靜，客廳很熱鬧。
+先生が親切で、いつも先生に相談します。
+老師很親切，我總是找老師商量。</p>
+<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
+ </div>
+ <div class="bluespan col-sm-10 offset-sm-1"></div>	
+ </div>
+
+ <div class="four border border-secondary">
+    <div class="row">
+ 	<h1 class="col-sm-3">1</h1>
+	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
+ </div>
+ <div class="row">
+ 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
+形容動詞中止形連接前後句子。
+鈴木さんはきれいでやさしいです。
+鈴木小姐既漂亮又温柔。
+部屋は静かで、リビングは賑やかです。
+房間很安靜，客廳很熱鬧。
+先生が親切で、いつも先生に相談します。
+老師很親切，我總是找老師商量。</p>
+<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
+ </div>
+ <div class="bluespan col-sm-10 offset-sm-1"></div>
+ </div>
+
+ <div class="hard">
+ 	
+ </div>
+
+</div>
+<div class="row">
+	<footer class="col-md-12">
+		
+	</footer>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	$("#flipbook_IDname").turn({
+  width: 400,
+  height: 300,
+  autoCenter: true
+});
+	$("#flipbook_IDname").turn("page", 3);
+	$("#flipbook_IDname").turn("size", 1200, 1200);
+	$(window).resize(function(){
+    $("#flipbook_IDNAME").turn("size", window.innerWidth*0.5,window.innerHeight*0.8);
+})
+</script>
+</html>

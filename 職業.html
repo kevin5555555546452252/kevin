@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: #ECECFF;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 1280px) {
+            .container {
+                width: 1280px;
+            }
+        }
+
+        header {
+            padding-left: 0 !important;
+            background-color: blue;
+            height: 200px;
+        }
+
+        .logo {
+            background-color: blue;
+        }
+
+        .logo img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .nav {
+            background-color: #eee;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .nav a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 30px;
+            font-size: 16px;
+        }
+
+        .nav ul {
+            width: 100%;
+        }
+
+        .nav li {
+            width: 100%;
+        }
+
+        .nav a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        nav ul a:hover {
+            text-decoration: none;
+        }
+
+        .news li {
+            width: 25%;
+            float: left;
+            height: 128px;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        .news li a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: purple;
+            position: relative;
+            color: black;
+
+        }
+
+        .news li a img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .news li a p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .5);
+            font-size: 12px;
+            color: #fff;
+            width: 100%;
+            height: 41px;
+            margin-bottom: 0;
+            padding: 5px 10px;
+        }
+
+        .news li:nth-child(1) {
+            width: 50%;
+            height: 266px;
+
+        }
+
+        .news li:nth-child(1) p {
+            line-height: 41px;
+            font-size: 20px;
+            padding: 0 10px;
+        }
+
+        .publish {
+            border-top: 1px solid #ccc;
+        }
+
+        .pic {
+            margin-top: 10px;
+        }
+
+        .publish .row {
+            border-bottom: 1px solid #000;
+            padding: 10px 0px;
+        }
+
+        .pic img {
+            width: 100%;
+        }
+
+        .banner img {
+            width: 100%;
+            background-color: blue;
+        }
+
+        .hot {
+            border: 1px solid #ccc;
+            display: block;
+            margin-top: 20px;
+            padding: 0 20px 20px;
+        }
+
+        .hot span {
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+
+        .hot p {
+            font-size: 12px;
+        }
+
+        .logo span {
+            color: #fff;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            display: block;
+            text-align: center;
+        }
+
+        h4:hover {
+            border: 1px solid red;
+        }
+
+        h3:hover {
+            color: blue;
+        }
+
+        .search-form {
+            position: relative;
+        }
+
+        .search-form .btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            box-shadow: none;
+            width: 70px;
+            padding: 6px;
+            border-radius: 0;
+            background-color: #FF5E52;
+            color: #fff;
+            opacity: .85;
+        }
+
+        @media screen and (max-width: 767px) {
+            .nav li a {
+                font-size: 14px;
+            }
+
+            .news li:nth-child(1) {
+                width: 100% !important;
+            }
+
+            .news li {
+                width: 50% !important;
+            }
+
+            .publish h3 {
+                font-size: 14px;
+            }
+
+            .publish p {
+                font-size: 10px;
+            }
+
+            form {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .nav li {
+                float: left;
+                width: 20%;
+            }
+
+            article {
+                margin-top: 10px;
+            }
+        }
+
+        .publish a p {
+            background-color: #8E8E8E;
+            text-align: center;
+            height: 50px;
+            padding-top: 10px;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .pink {
+            height: 300px;
+            width: 700px;
+            background-color: pink;
+            border-radius: 20px;
+        }
+
+        .orange {
+            background-color: #D2E9FF;
+            margin-top: 30px;
+            border-radius: 20px;
+            text-align: center;
+            opacity: 0.8;
+
+        }
+
+        footer {
+            padding-top: 50px;
+            padding-left: 40%;
+        }
+
+        header {
+            background-image: url(w644.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <header coi-md-12>
+
+            </header>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">職業篇單字</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">單字</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">絵（え）</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>圖畫 畫</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>絵を描くのが上手です</h5>
+                        <h6>很會畫畫</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">会社（かいしゃ）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>公司</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>お父さんの会社は台北にあります</h5>
+                        <p>爸爸的公司在台北</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">教育（きょういく）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>教育</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>山中さんは小さい頃から、アメリカで教育を受けました</h5>
+                        <h6>山中小姐自幼在美國接受教育</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">教室（きょうしつ）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>教室</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>放課後、教室には一人もいません</h5>
+                        <h6>下課後教室一人都沒有</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">専門（せんもん）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>專門</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>大学で日本語教育を専門に勉強していました</h5>
+                        <h6>大學時代主修日本語教育</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">工業（こうぎょう）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>工業</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>日本の北九州の電子工業が盛んです</h5>
+                        <h6>日本北九州的電子工業興盛
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">高校（こうこう）</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>高中</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>高校を卒業してからイギリス行くつもりです</h5>
+                        <h6>高中畢業後打算到美國</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">中学校（ちゅうがっこう）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>國中 中學</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>お兄さんは中学校の学生てす</h5>
+                        <p>哥哥是國中生</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">高校生（こうこうせい）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>高中生</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>多くの高校生は政治に関心を持つていません</h5>
+                        <h6>多數高中生對政治不關心</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">講義（こうぎ）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>講課 講解 講義</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>郭先生の講義が面白いので若い学生がたくさんいます</h5>
+                        <h6>郭老師講課有趣,所以有很多年輕學生</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">生徒（せいと）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>(國中或高中)的學生
+                        </h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>山田先生のクラス生徒が五十人います</h5>
+                        <h6>山田老師班上的學有50人</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">先生（せんせい）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>老師</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>先生は話が上手です</h5>
+                        <h6>老師很會講話
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">先輩（せんぱい）</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>前輩 學長 學姊</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>先輩のおかげで就職先を順調に見つかりました</h5>
+                        <h6>托學長的福,順利找到工作了</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">アルバイト</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>打工</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>弟はレストランでアルバイトをしています</h5>
+                        <p>弟弟在餐廳打工</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">関係（かんけい）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>關系</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>私は教育関係の仕事をしたいと思います</h5>
+                        <h6>我想從事與教育有關的工作</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">警官（けいかん）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>警察</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>お兄さんは警官になりました</h5>
+                        <h6>哥哥便成了警官</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">お巡りさん（おまわりさん）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>巡警</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>お巡りさんに道を聞きました</h5>
+                        <h6>跟管區問了路</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">辞める（やめる）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>辭去</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>会社に仕事を辞めさせられました</h5>
+                        <h6>被公司強迫辭去工作
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">警察（けいさつ）</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>警察</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>泥棒は警察に捕まえられました</h5>
+                        <h6>小頭被警察逮補了</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">工場（こうじょう）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>工廠</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>この工場に従業員が千人以上もいます</h5>
+                        <p>這家工廠作業員有一千人以上</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">校長（こうちょう）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>校長</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>校長のスピーチが長くてたまらないのです</h5>
+                        <h6>校長的演講太沉常令人受不了</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">仕事（しごと）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>工作</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>姉の仕事は看護婦です</h5>
+                        <h6>姐姐的工作是護士</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">貿易（ぼうえき）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>貿易</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>貿易会社の仕事を機会に、外国人と付き合うことを勉強します</h5>
+                        <h6>藉著在貿易公司工作的機會,學習與外國人打交道</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">法律（ほうりつ）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>法律</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>法律を定めます</h5>
+                        <h6>制定法律
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">翻訳（ほんやく）</h1><input type="checkbox" name="">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>翻譯</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>私は専門の翻訳家になろうと思います</h5>
+                        <h6>我想成為專業的翻譯工作者</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">働く（はたらく）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>工作</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6" style="word-wrap: break-word;">
+                        <h5>結婚する前に父の会社で働いていました</h5>
+                        <p>結婚前在爸爸的公司工作</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">教える（おしえる）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>教授 指導</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>私は外国人に中国語を教えています</h5>
+                        <h6>我正在教外國人中文</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">踊る（おどる）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>跳舞 舞動</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>ピアノの伴奏でワルツを踊るります</h5>
+                        <h6>隨著鋼琴伴奏跳華爾滋</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">捕まえる（つかまえる）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>逮補 捉到</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>警察は犯人を捕まえましたが、また犯人に逃げられました</h5>
+                        <h6>警察雖捉到犯人,卻又被犯人逃跑了</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="text-align: center;">勤める（つとめる）</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>中日文一起學</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>工作 任職 擔任</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>從例句學單字</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>父は貿易商社に勤めています</h5>
+                        <h6>父親在貿易公司上班
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="text-align: center;">勤める（つとめる）</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>中日文一起學</h3>
+                </div>
+                <div class="col-md-6">
+                    <h5>工作 任職 擔任</h5>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>從例句學單字</h3>
+                </div>
+                <div class="col-md-6">
+                    <h5>父は貿易商社に勤めています</h5>
+                    <h6>父親在貿易公司上班
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

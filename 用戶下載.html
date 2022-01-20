@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+		crossorigin="anonymous"></script>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"></script>
+	<title></title>
+
+	<style type="text/css">
+        article {
+				margin-top: 10px;
+                background-color: #FFECF5;
+                text-align: center;
+			}
+            article a {
+				font-size: 33px;
+			}    
+		body {
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			background-color: #fff;
+			min-width: 600px;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		@media screen and (min-width: 1280px) {
+			.container {
+				width: 1280px;
+			}
+		}
+
+		header {
+			padding-left: 0 !important;
+		}
+
+		.logo {
+			background-color: blue;
+		}
+
+		.logo img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		.nav {
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.nav a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 30px;
+			font-size: 16px;
+		}
+
+		.nav ul {
+			width: 100%;
+		}
+
+		.nav li {
+			width: 100%;
+		}
+
+		.nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+
+		a {
+			color: #666;
+			text-decoration: none;
+		}
+
+		nav ul a:hover {
+			text-decoration: none;
+		}
+
+		.news li {
+			width: 25%;
+			float: left;
+			height: 128px;
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+
+		.news li a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: purple;
+			position: relative;
+			color: black;
+
+		}
+
+		.news li a img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.news li a p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .5);
+			font-size: 12px;
+			color: #fff;
+			width: 100%;
+			height: 41px;
+			margin-bottom: 0;
+			padding: 5px 10px;
+		}
+
+		.news li:nth-child(1) {
+			width: 50%;
+			height: 266px;
+
+		}
+
+		.news li:nth-child(1) p {
+			line-height: 41px;
+			font-size: 20px;
+			padding: 0 10px;
+		}
+
+		.publish {
+			border-top: 1px solid #ccc;
+		}
+
+		.pic {
+			margin-top: 10px;
+		}
+
+		.publish .row {
+			border-bottom: 1px solid #000;
+			padding: 10px 0px;
+		}
+
+		.pic img {
+			width: 100%;
+		}
+
+		.banner img {
+			width: 100%;
+			background-color: blue;
+		}
+
+		.hot {
+			border: 1px solid #ccc;
+			display: block;
+			margin-top: 20px;
+		}
+
+		.hot span {
+			border-radius: 0;
+			margin-bottom: 20px;
+		}
+
+		.hot p {
+			font-size: 12px;
+		}
+
+		.logo span {
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			display: block;
+			text-align: center;
+		}
+
+		h4:hover {
+			border: 1px solid red;
+		}
+
+		h3:hover {
+			color: orange;
+		}
+
+		.search-form {
+			position: relative;
+		}
+
+		.search-form .btn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			box-shadow: none;
+			width: 70px;
+			padding: 6px;
+			border-radius: 0;
+			background-color: #FF5E52;
+			color: #fff;
+			opacity: .85;
+		}
+
+		footer {
+			width: 100%;
+			height: 140px;
+			background-color: #D0D0D0;
+			margin-top: 10px;
+		}
+
+		@media screen and (max-width: 767px) {
+			.nav li a {
+				font-size: 14px;
+			}
+
+			.news li:nth-child(1) {
+				width: 100% !important;
+			}
+
+			.news li {
+				width: 50% !important;
+			}
+
+			.publish h3 {
+				font-size: 14px;
+			}
+
+			.publish p {
+				font-size: 10px;
+			}
+
+			form {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 991px) {
+			.nav li {
+				float: left;
+				width: 20%;
+			}
+
+			article {
+				margin-top: 10px;
+                background-color: bisque;
+			}
+		}
+
+		.publish a p {
+			background-color: #8E8E8E;
+			text-align: center;
+			height: 50px;
+			padding-top: 10px;
+			font-size: 20px;
+			color: white;
+
+		}
+		.big:hover{
+           opacity: 0.5;
+		   transform:scale(1.08,1.08);
+		}
+		.timediv{
+			background-color: #02F78E;
+			color: #fff;
+			margin-left:10px;
+			width: 100%;
+			font-size: 30px;
+		}
+		.timebigdiv{
+			text-align: center;
+			height: 100px;
+		}
+		.vervbigdiv{
+			background-color: #BBFFBB;
+			padding-top: 15px;
+			margin-top: 15px;
+			border-color: #000; 
+		}
+		.day {
+			background-color: red;
+			color: #fff;
+			margin-left: 10px;
+			width: 100%;
+			font-size: 30px;
+		}
+
+		.hour {
+			background-color: #02F78E;
+			color: #fff;
+			margin-left: 10px;
+			width: 100%;
+			font-size: 30px;
+		}
+
+		.minute {
+			background-color: #02F78E;
+			color: #fff;
+			margin-left: 10px;
+			width: 100%;
+			font-size: 30px;
+		}
+
+		.second {
+			background-color: #02F78E;
+			color: #fff;
+			margin-left: 10px;
+			width: 100%;
+			font-size: 30px;
+		}
+
+		.timebigdiv {
+			text-align: center;
+			height: 100px;
+		}
+
+		.vervbigdiv {
+			background-color: #BBFFBB;
+			padding-top: 15px;
+			margin-top: 15px;
+			border-color: #000;
+		}
+	</style>
+</head>
+
+<body >
+	<Embed Src="網頁用音樂檔案" Loop="True"|"Flase" AutoStart="True"|"Flase" Hidden=True|Flase>
+	<div class="container">
+		<div class="col-md-12">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand offset-sm-0" href="#" style="margin-left:15px;">日文網</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="50音.html">50音<span class="sr-only"></span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="客廳篇單字.html">單字</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="文法.html">文法</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="線上檢測.html">測驗</a>
+						</li>
+					</ul>
+					<a class="nav-item offset-sm-7">
+						<a class="" href="註冊.html">註冊</a>
+					</a>
+					<a class="nav-item offset-sm-1">
+						<a class="" href="#">登入</a>
+					</a>
+				</div>
+			</nav>
+		</div>
+		<div class="row">
+			<header class="col-md-2">
+				<div class="logo">
+					<a href="#">
+						<img src="0519-1.jpg" alt="" class="d-none d-sm-block">
+						<span class="d-block d-sm-none">日文網</span>
+					</a>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#" style="font-weight: bold;">文章閱讀</a></li>
+						<li><a href="#" style="font-weight: bold;">歷屆題庫下載</a></li>
+						<li><a href="留言板.html" style="font-weight: bold;">留言板</a></li>
+						<li><a href="#" style="font-weight: bold;">XXX</a></li>
+					</ul>
+					
+				</div>
+
+			</header>
+			<article class="col-md-7">
+                <a href="C:\Users\kevun\Desktop\專題作品\N4L.pdf" download="N4L.pdf">N5歷屆庫點選下載(1)</a><hr>
+				<a href="C:\Users\kevun\Desktop\專題作品\N4R.pdf" download="N4R.pdf">N5歷屆庫點選下載(2)</a><hr>
+                <a href="C:\Users\kevun\Desktop\專題作品\N5L.pdf" download="N5L.pdf">N5歷屆庫點選下載(3)</a><hr>
+                <a href="C:\Users\kevun\Desktop\專題作品\N5G.pdf" download="N5G.pdf">N5歷屆庫點選下載(4)</a><hr>
+                <a href="C:\Users\kevun\Desktop\專題作品\N5R.pdf" download="N5R.pdf">N5歷屆庫點選下載(5)</a><hr>	              
+			</article>
+			<aside class="col-lg-3 col-sm-12">
+				<a href="https://www3.nhk.or.jp/news/" class="hot">
+					<img src="images/nhk.jpg.jfif" style="width: 100%;">
+
+				</a>
+				<a href="https://www.nicovideo.jp/" class="hot">
+					<img src="images/niconico.png" style="width: 100%;">
+				</a>
+				<a href="https://www.jlpt.tw/" class="hot">
+					<img src="images/jlpt.png" style="width: 100%;">
+				</a>
+				<div class="col-sm-12 vervbigdiv">
+
+					<h2 style="text-align: center; margin-top: 15px;">日檢倒數</h2>
+					<h3 style="text-align: center; margin-top: 15px;">測驗日期：2021/12/05</h3>
+					<p style="font-size: 20px; text-align: center">距離2021年第2回日檢還有…</p>
+					<div id="" class=""> 
+						<div class="timebigdiv col-lg-12 col-sm-12"> 
+							<span class="day col-lg-3 col-sm-3">59</span>天
+							<span class="hour col-lg-3 col-sm-3">13</span>時
+							<span class="minute col-lg-3 col-sm-3">58</span>分 
+							<span class="second col-lg-3 col-sm-3">31</span>秒    
+						</div> 
+					</div>
+					
+				</div>
+			</aside>
+		</div>
+	</div>
+	<footer>
+
+	</footer>
+</body>
+<script>
+	var day = document.querySelector('.day');
+	var hour = document.querySelector('.hour');
+	var minute = document.querySelector('.minute');
+	var second = document.querySelector('.second');
+	future = '2021-10-11 9:09:40';
+	var inputtime = +new Date(future);
+	var inputtime2 = +new Date('2022-6-1 22:38:40');
+	countDown()
+
+	var t1 = setInterval(countDown, 1000);
+
+
+
+
+
+	function countDown() {
+		var nowtime = +new Date();
+		var times = (inputtime - nowtime) / 1000;
+		if (times < 0) {
+			clearInterval(t1);
+			day.innerHTML = '00';
+			countDown2()
+			var t2 = setInterval(countDown2, 1000);
+		};
+		var d = parseInt(times / 60 / 60 / 24);
+		d = d < 10 ? '0' + d : d;
+		var h = parseInt(times / 60 / 60 % 24);
+		h = h < 10 ? '0' + h : h;
+		var m = parseInt(times / 60 % 60);
+		m = m < 10 ? '0' + m : m;
+		var s = parseInt(times % 60);
+		s = s < 10 ? '0' + s : s;
+		day.innerHTML = d;
+		hour.innerHTML = h;
+		minute.innerHTML = m;
+		second.innerHTML = s;
+	};
+	function countDown2() {
+		var nowtime = +new Date();
+		var times = (inputtime2 - nowtime) / 1000;
+		if (times < 0) {
+			clearInterval(t1);
+			day.innerHTML = '00';
+		};
+		var d = parseInt(times / 60 / 60 / 24);
+		d = d < 10 ? '0' + d : d;
+		var h = parseInt(times / 60 / 60 % 24);
+		h = h < 10 ? '0' + h : h;
+		var m = parseInt(times / 60 % 60);
+		m = m < 10 ? '0' + m : m;
+		var s = parseInt(times % 60);
+		s = s < 10 ? '0' + s : s;
+		day.innerHTML = d;
+		hour.innerHTML = h;
+		minute.innerHTML = m;
+		second.innerHTML = s;
+	};
+</script>
+
+</html>

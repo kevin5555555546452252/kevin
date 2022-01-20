@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+		crossorigin="anonymous"></script>
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			background-color: #ECECFF;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		@media screen and (min-width: 1280px) {
+			.container {
+				width: 1280px;
+			}
+		}
+
+		header {
+			padding-left: 0 !important;
+			background-color: blue;
+			height: 200px;
+		}
+
+		.logo {
+			background-color: blue;
+		}
+
+		.logo img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		.nav {
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.nav a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 30px;
+			font-size: 16px;
+		}
+
+		.nav ul {
+			width: 100%;
+		}
+
+		.nav li {
+			width: 100%;
+		}
+
+		.nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+
+		a {
+			color: #666;
+			text-decoration: none;
+		}
+
+		nav ul a:hover {
+			text-decoration: none;
+		}
+
+		.news li {
+			width: 25%;
+			float: left;
+			height: 128px;
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+
+		.news li a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: purple;
+			position: relative;
+			color: black;
+
+		}
+
+		.news li a img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.news li a p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .5);
+			font-size: 12px;
+			color: #fff;
+			width: 100%;
+			height: 41px;
+			margin-bottom: 0;
+			padding: 5px 10px;
+		}
+
+		.news li:nth-child(1) {
+			width: 50%;
+			height: 266px;
+
+		}
+
+		.news li:nth-child(1) p {
+			line-height: 41px;
+			font-size: 20px;
+			padding: 0 10px;
+		}
+
+		.publish {
+			border-top: 1px solid #ccc;
+		}
+
+		.pic {
+			margin-top: 10px;
+		}
+
+		.publish .row {
+			border-bottom: 1px solid #000;
+			padding: 10px 0px;
+		}
+
+		.pic img {
+			width: 100%;
+		}
+
+		.banner img {
+			width: 100%;
+			background-color: blue;
+		}
+
+		.hot {
+			border: 1px solid #ccc;
+			display: block;
+			margin-top: 20px;
+			padding: 0 20px 20px;
+		}
+
+		.hot span {
+			border-radius: 0;
+			margin-bottom: 20px;
+		}
+
+		.hot p {
+			font-size: 12px;
+		}
+
+		.logo span {
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			display: block;
+			text-align: center;
+		}
+
+		h4:hover {
+			border: 1px solid red;
+		}
+
+		h3:hover {
+			color: blue;
+		}
+
+		.search-form {
+			position: relative;
+		}
+
+		.search-form .btn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			box-shadow: none;
+			width: 70px;
+			padding: 6px;
+			border-radius: 0;
+			background-color: #FF5E52;
+			color: #fff;
+			opacity: .85;
+		}
+
+		@media screen and (max-width: 767px) {
+			.nav li a {
+				font-size: 14px;
+			}
+
+			.news li:nth-child(1) {
+				width: 100% !important;
+			}
+
+			.news li {
+				width: 50% !important;
+			}
+
+			.publish h3 {
+				font-size: 14px;
+			}
+
+			.publish p {
+				font-size: 10px;
+			}
+
+			form {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 991px) {
+			.nav li {
+				float: left;
+				width: 20%;
+			}
+
+			article {
+				margin-top: 10px;
+			}
+		}
+
+		.publish a p {
+			background-color: #8E8E8E;
+			text-align: center;
+			height: 50px;
+			padding-top: 10px;
+			font-size: 20px;
+			color: white;
+
+		}
+
+		.pink {
+			height: 300px;
+			width: 700px;
+			background-color: pink;
+			border-radius: 20px;
+		}
+
+		.orange {
+			background-color: #D2E9FF;
+			margin-top: 30px;
+			border-radius: 20px;
+			text-align: center;
+			opacity: 0.8;
+
+		}
+
+		footer {
+			padding-top: 50px;
+			padding-left: 40%;
+		}
+
+		header {
+			background-image: url(w644.jpg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<header coi-md-12>
+
+			</header>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">水果篇單字</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">單字</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">バナナ</h1><input type="checkbox" name="">
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>香蕉</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>果物の中で一番好きなのはバナナです</h5>
+						<h6>水果當中最喜歡香蕉</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">お土産（おみやげ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>土產 名產</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6" style="word-wrap: break-word;">
+						<h5>台中での一番有名なお土産はパイナップルケーキと思います</h5>
+						<p>我認為台中最有名的特產是鳳梨酥</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">果物（くだもの）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>水果</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>果物は体にいいです</h5>
+						<h6>水果對什體很好</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">売店（ばいてん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>小商店</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>これは向こうの売店で買作った果物です</h5>
+						<h6>這是在對面小商店買的水果</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">植える（うえる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>種植</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>畑に野菜と果物を植えます</h5>
+						<h6>在田地種植蔬菜與水果</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">比べる（くらべる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>比較</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>私は他人と比べることが大嫌いです</h5>
+						<h6>我最討厭和人比較
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<nav aria-label="Page navigation example">
+		<ul class="pagination">
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">4</a></li>
+			<li class="page-item"><a class="page-link" href="#">5</a></li>
+			<li class="page-item">
+				<a class="page-link" href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</body>
+
+</html>

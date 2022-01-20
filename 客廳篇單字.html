@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+		crossorigin="anonymous"></script>
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			background-color: #ECECFF;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		@media screen and (min-width: 1280px) {
+			.container {
+				width: 1280px;
+			}
+		}
+
+		header {
+			padding-left: 0 !important;
+			background-color: blue;
+			height: 200px;
+		}
+
+		.logo {
+			background-color: blue;
+		}
+
+		.logo img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		.nav {
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.nav a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 30px;
+			font-size: 16px;
+		}
+
+		.nav ul {
+			width: 100%;
+		}
+
+		.nav li {
+			width: 100%;
+		}
+
+		.nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+
+		a {
+			color: #666;
+			text-decoration: none;
+		}
+
+		nav ul a:hover {
+			text-decoration: none;
+		}
+
+		.news li {
+			width: 25%;
+			float: left;
+			height: 128px;
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+
+		.news li a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: purple;
+			position: relative;
+			color: black;
+
+		}
+
+		.news li a img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.news li a p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .5);
+			font-size: 12px;
+			color: #fff;
+			width: 100%;
+			height: 41px;
+			margin-bottom: 0;
+			padding: 5px 10px;
+		}
+
+		.news li:nth-child(1) {
+			width: 50%;
+			height: 266px;
+
+		}
+
+		.news li:nth-child(1) p {
+			line-height: 41px;
+			font-size: 20px;
+			padding: 0 10px;
+		}
+
+		.publish {
+			border-top: 1px solid #ccc;
+		}
+
+		.pic {
+			margin-top: 10px;
+		}
+
+		.publish .row {
+			border-bottom: 1px solid #000;
+			padding: 10px 0px;
+		}
+
+		.pic img {
+			width: 100%;
+		}
+
+		.banner img {
+			width: 100%;
+			background-color: blue;
+		}
+
+		.hot {
+			border: 1px solid #ccc;
+			display: block;
+			margin-top: 20px;
+			padding: 0 20px 20px;
+		}
+
+		.hot span {
+			border-radius: 0;
+			margin-bottom: 20px;
+		}
+
+		.hot p {
+			font-size: 12px;
+		}
+
+		.logo span {
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			display: block;
+			text-align: center;
+		}
+
+		h4:hover {
+			border: 1px solid red;
+		}
+
+		h3:hover {
+			color: blue;
+		}
+
+		.search-form {
+			position: relative;
+		}
+
+		.search-form .btn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			box-shadow: none;
+			width: 70px;
+			padding: 6px;
+			border-radius: 0;
+			background-color: #FF5E52;
+			color: #fff;
+			opacity: .85;
+		}
+
+		@media screen and (max-width: 767px) {
+			.nav li a {
+				font-size: 14px;
+			}
+
+			.news li:nth-child(1) {
+				width: 100% !important;
+			}
+
+			.news li {
+				width: 50% !important;
+			}
+
+			.publish h3 {
+				font-size: 14px;
+			}
+
+			.publish p {
+				font-size: 10px;
+			}
+
+			form {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 991px) {
+			.nav li {
+				float: left;
+				width: 20%;
+			}
+
+			article {
+				margin-top: 10px;
+			}
+		}
+
+		.publish a p {
+			background-color: #8E8E8E;
+			text-align: center;
+			height: 50px;
+			padding-top: 10px;
+			font-size: 20px;
+			color: white;
+
+		}
+
+		.pink {
+			height: 300px;
+			width: 700px;
+			background-color: pink;
+			border-radius: 20px;
+		}
+
+		.orange {
+			background-color: #D2E9FF;
+			margin-top: 30px;
+			border-radius: 20px;
+			text-align: center;
+			opacity: 0.8;
+
+		}
+
+		footer {
+			padding-top: 50px;
+			padding-left: 40%;
+		}
+
+		header {
+			background-image: url(w644.jpg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<header coi-md-12>
+
+			</header>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">客廳篇單字</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">單字</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">部屋（へや）</h1><input type="checkbox" name="">
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>房子,屋子</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>部屋の中に誰かいます</h5>
+						<h6>房子裡有人</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">テーブル</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>桌子</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6" style="word-wrap: break-word;">
+						<h5>テーブルにに花を置きます</h5>
+						<p>在桌子上放花</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">本棚(ほんだな）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>書架</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>本棚には本が並んでいます</h5>
+						<h6>書架上有書排列著</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">本（ほん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>書</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>好きな本を読みます</h5>
+						<h6>看喜歡的書</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">カレンダー</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>月曆</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>壁にカレンダーを掛けます</h5>
+						<h6>在牆上掛月曆</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">時計（とけい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>鐘錶</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>時計がないから時間がわかりません</h5>
+						<h6>因為沒有錶,所以不知道時間</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">ドア</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>門</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>ドアを閉めてください</h5>
+						<h6>請把門關起來</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">椅子（いす）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>椅子</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>椅子に座ります</h5>
+						<h6>坐在椅子上</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">テレビ</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>電視</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>テレビを見ながら食べる</h5>
+						<h6>邊看電視邊吃飯</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">窓（まど）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>窗戶</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>窓を開けて風をいれます</h5>
+						<h6>開窗讓風吹進來</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">カーテン</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>窗簾</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>カーテンを開けたまま、出かけとしまいました</h5>
+						<h6>窗簾開著就跑出去了</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">灰皿（はいざら）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>菸灰缸</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>タバコをすわないから灰皿がありません</h5>
+						<h6>因為不抽菸所以沒有菸灰缸</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">広い（ひろい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>廣闊的 寬的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>兄の部屋は広いです</h5>
+						<h6>哥哥的房間很大</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">暗い（くらい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>黑暗的 無知的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>暗い道は危ないです</h5>
+						<h6>暗暗的道路很危險</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">明るい（あかるい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>明亮的 鮮明的 快活的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>お風呂に入ると気分が明かるくなります</h5>
+						<h6>只要一泡澡就變得神清氣爽</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">花瓶（かびん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>花瓶</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>猫はテレビの上にある花瓶を落しました</h5>
+						<h6>貓將電視機上的花瓶打翻了</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">電話（でんわ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>電話</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>昨日先生から電話がありました</h5>
+						<h6>昨天老師有打電話給我</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">ごみ</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>垃圾</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>燃えるごみと燃えないごみを分けて、ゴミ箱に捨てます</h5>
+						<h6>分類可燃與不可燃垃圾後在丟進桶內</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">冷房（れいぼう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>冷氣</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>事務室に冷房がありません</h5>
+						<h6>辦公室沒裝冷氣</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">廊下（ろうか）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>走廊</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>廊下を磨きます</h5>
+						<h6>把走廊擦乾淨</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">鍵（かぎ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>鑰匙</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>鍵を掛けて出かけます</h5>
+						<h6>鎖上鎖再出門</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">ベル</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>門鈴 鐘</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>玄関のベルを何回も押したが、誰もいなかつたようです</h5>
+						<h6>按了好幾次門鈴,似乎沒人在家</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">玄関（げんかん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>門口 大門</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>玄関で靴をヌ脱いでください</h5>
+						<h6>請在玄關拖鞋</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">庭（にわ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>庭院</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>庭に鳥が飛んで来ます</h5>
+						<h6>庭院裡有鳥飛來</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">戸（と）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>門 房門</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>玄関の戸の色は青です</h5>
+						<h6>玄關大門的顏色是藍色</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">時間（じかん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>時間 時刻</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>今日は忙しくで時間がありません</h5>
+						<h6>今天忙得沒有時間</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">番組（ばんぐみ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>節目</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>今晩のテレビ番組はつまらなかつたです</h5>
+						<h6>今晚的電視節目很無聊</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">ニュース</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>新聞 消息</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>今日は何かニュースがありませんか</h5>
+						<h6>今天有甚麼新聞嗎?</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">ガウス</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>玻璃</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>強風のため、窓のガウスがガタガタと音をしました</h5>
+						<h6>強風造成窗戶的玻璃發出嘎答嘎答的聲音</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">タバコ</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>菸草 煙</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>一日にタバコを二十本吸います</h5>
+						<h6>一天抽20根菸</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">花（はな）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>花</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>今日は忙しくで時間がありません</h5>
+						<h6>花非常地漂亮</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">留守（るす）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>外出 不在家</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>山田さんの家に電話しましたが留守のようです</h5>
+						<h6>打電話到山田家,但他似乎不在</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">袋（ふくろ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>袋子</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>大手企業は環境に優しいビニール袋を開発しでいます</h5>
+						<h6>大型企業正在開發環保塑膠袋</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">風（かぜ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>風</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>風がなく暑いです</h5>
+						<h6>沒有風很熱</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">良い（いい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>好的 吉(日)的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>お兄さんは頭がいいです</h5>
+						<h6>哥哥的頭腦很聰明</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">涼しい（すずしい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>涼爽的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>午後は雨が降って少し涼しくなりました</h5>
+						<h6>午後下了雨天氣稍微涼爽了</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">遊ぶ（あそぶ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>遊玩</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>弟と妹は外で遊んでいます</h5>
+						<h6>弟弟和妹妹正在外面玩</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">壊れる（こわれる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>壞掉 破壞</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>地震で花瓶は机から落ちて、ばらばらに壊れてしまいました</h5>
+						<h6>地震造成花瓶七零八落地摔壞了</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">捨てる（すてる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>丟棄 丟掉</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>燃えるゴミと燃えないゴミを一緒に捨ててはいけません</h5>
+						<h6>請別同時丟棄可燃垃圾與不可燃垃圾</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">座る（すわる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>坐</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>椅子に座ります</h5>
+						<h6>坐在椅子上</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">置く（おく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>放置</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>荷物をここに置くないでください</h5>
+						<h6>請不要把行李放這裡</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">開く（ひらく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>打開</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>窓を開けて、朝の綺麗な空気を大きく吸います</h5>
+						<h6>打開窗戶大口吸清晨的新鮮空氣</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">閉める（しめる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>關閉</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>ドアを閉めてください</h5>
+						<h6>請把門關著</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">見る（みる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>看</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>今晩はテレビを見ます</h5>
+						<h6>今天晚上要看電視</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">開ける（あける）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>開 打開</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>窓を開けます</h5>
+						<h6>開窗戶</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">引く（ひく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>拉 減</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>このドアは引いて開けます</h5>
+						<h6>這門要用拉開的</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">吸い（すう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>吸 吸入</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>タバコを吸いのは体によくないです</h5>
+						<h6>吸菸對身體不好</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">かける</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>打(電話) 坐</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>家族に電話をかけます</h5>
+						<h6>打電話給家人</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+</body>
+
+</html>

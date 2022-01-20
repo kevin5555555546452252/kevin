@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+		crossorigin="anonymous"></script>
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			background-color: #ECECFF;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		@media screen and (min-width: 1280px) {
+			.container {
+				width: 1280px;
+			}
+		}
+
+		header {
+			padding-left: 0 !important;
+			background-color: blue;
+			height: 200px;
+		}
+
+		.logo {
+			background-color: blue;
+		}
+
+		.logo img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		.nav {
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.nav a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			padding-left: 30px;
+			font-size: 16px;
+		}
+
+		.nav ul {
+			width: 100%;
+		}
+
+		.nav li {
+			width: 100%;
+		}
+
+		.nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+
+		a {
+			color: #666;
+			text-decoration: none;
+		}
+
+		nav ul a:hover {
+			text-decoration: none;
+		}
+
+		.news li {
+			width: 25%;
+			float: left;
+			height: 128px;
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+
+		.news li a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: purple;
+			position: relative;
+			color: black;
+
+		}
+
+		.news li a img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.news li a p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .5);
+			font-size: 12px;
+			color: #fff;
+			width: 100%;
+			height: 41px;
+			margin-bottom: 0;
+			padding: 5px 10px;
+		}
+
+		.news li:nth-child(1) {
+			width: 50%;
+			height: 266px;
+
+		}
+
+		.news li:nth-child(1) p {
+			line-height: 41px;
+			font-size: 20px;
+			padding: 0 10px;
+		}
+
+		.publish {
+			border-top: 1px solid #ccc;
+		}
+
+		.pic {
+			margin-top: 10px;
+		}
+
+		.publish .row {
+			border-bottom: 1px solid #000;
+			padding: 10px 0px;
+		}
+
+		.pic img {
+			width: 100%;
+		}
+
+		.banner img {
+			width: 100%;
+			background-color: blue;
+		}
+
+		.hot {
+			border: 1px solid #ccc;
+			display: block;
+			margin-top: 20px;
+			padding: 0 20px 20px;
+		}
+
+		.hot span {
+			border-radius: 0;
+			margin-bottom: 20px;
+		}
+
+		.hot p {
+			font-size: 12px;
+		}
+
+		.logo span {
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			display: block;
+			text-align: center;
+		}
+
+		h4:hover {
+			border: 1px solid red;
+		}
+
+		h3:hover {
+			color: blue;
+		}
+
+		.search-form {
+			position: relative;
+		}
+
+		.search-form .btn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			box-shadow: none;
+			width: 70px;
+			padding: 6px;
+			border-radius: 0;
+			background-color: #FF5E52;
+			color: #fff;
+			opacity: .85;
+		}
+
+		@media screen and (max-width: 767px) {
+			.nav li a {
+				font-size: 14px;
+			}
+
+			.news li:nth-child(1) {
+				width: 100% !important;
+			}
+
+			.news li {
+				width: 50% !important;
+			}
+
+			.publish h3 {
+				font-size: 14px;
+			}
+
+			.publish p {
+				font-size: 10px;
+			}
+
+			form {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 991px) {
+			.nav li {
+				float: left;
+				width: 20%;
+			}
+
+			article {
+				margin-top: 10px;
+			}
+		}
+
+		.publish a p {
+			background-color: #8E8E8E;
+			text-align: center;
+			height: 50px;
+			padding-top: 10px;
+			font-size: 20px;
+			color: white;
+
+		}
+
+		.pink {
+			height: 300px;
+			width: 700px;
+			background-color: pink;
+			border-radius: 20px;
+		}
+
+		.orange {
+			background-color: #D2E9FF;
+			margin-top: 30px;
+			border-radius: 20px;
+			text-align: center;
+			opacity: 0.8;
+
+		}
+
+		footer {
+			padding-top: 50px;
+			padding-left: 40%;
+		}
+
+		header {
+			background-image: url(page.jpeg);
+		}
+
+		div ul li:hover {
+			background-color: #E8FFC4;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<header coi-md-12>
+
+			</header>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">廚房篇單字</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">單字</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">ちゃわん</h1><input type="checkbox" name="">
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>茶碗 飯碗</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>茶碗を壊さないように気をつけてください</h5>
+						<h6>請小心別打破茶碗</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">コツプ</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>玻璃杯</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6" style="word-wrap: break-word;">
+						<h5>コツプに水をください</h5>
+						<p>請在玻璃杯倒水</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">冷蔵庫（れいぞうに）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>冰箱</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>冷蔵庫に腐った牛乳を捨てます</h5>
+						<h6>丟棄冰箱的腐壞牛奶</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">お皿（おさら）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>盤子</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>お皿が割れそうなので、気をつきたほうがいいですよ</h5>
+						<h6>盤子似乎有裂痕,小心一點比較好喔</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">肉（にく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>肉</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>弟は肉が嫌いです</h5>
+						<h6>弟弟討厭肉</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">牛肉（ぎゅうにく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>牛肉</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>肉の中で牛肉が一番好きです</h5>
+						<h6>在肉類當中,我最喜歡牛肉</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">牛乳（ぎゅうにゅう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>牛奶</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>鍋に牛乳とにんじんを入れて、そのまま10つ分ほど炒めます</h5>
+						<h6>鍋內放進牛奶和紅蘿蔔後,炒10分鐘</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">鶏肉（とりにく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>雞肉</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>鶏肉はやわらかいです</h5>
+						<h6>雞肉很軟</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">豚肉（ぶたにく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>豬肉</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>今日は豚肉を使って晩ご飯を作ります</h5>
+						<h6>今日用豬肉做晚餐</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">がヅプ</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>杯子</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>カツプをいただきまして、どうもありがとう</h5>
+						<h6>收下了您的杯子,謝謝</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">野菜（やさい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>蔬菜</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>野菜は細かく切つて弱い火で炒めます</h5>
+						<h6>蔬菜切碎後用小火炒</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">バター</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>奶油</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>パンにバターをたつぷり塗ります</h5>
+						<h6>在麵包上塗上厚厚的奶油</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">パン</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>麵包</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>おばあさんはパンを作りました</h5>
+						<h6>奶奶做了麵包</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">パンカチ</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>手帕</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>ハンカチの汚れを落とします</h5>
+						<h6>清除手帕的汙垢</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">匂い（におい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>味道</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>コーヒーの匂いがします</h5>
+						<h6>聞到咖啡的味道</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">食べる（たべる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>吃 生活</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>ご飯を食べましょう</h5>
+						<h6>我們去吃飯吧</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">ご飯（ごはん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>飯 米飯</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>ご飯を食べてから帰ります</h5>
+						<h6>吃飯後回家</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">米（こめ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>米</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>123</h5>
+						<h6>多數台灣人以米當主食</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">砂糖（さとう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>砂糖</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>柔らかくしたバターに砂糖を加えます</h5>
+						<h6>在軟化的奶油上加砂糖</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">食堂（しょくどう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>餐廳</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>時々駅に近くある食堂でカレーライスを食べます</h5>
+						<h6>有時會在車站附近的餐廳吃咖哩飯</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">食料品（しょくりょうひん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>食品 乾貨</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>あなた、隣の食料品店お新香を買つてくれない</h5>
+						<h6>親愛的!可否幫我道旁邊的食品店買泡菜呢?</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">料理（りょうり）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>料理 做菜 烹調</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>山田先生に日本料理を作つていただきました</h5>
+						<h6>請山田老師做日本料理</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">晩ご飯（ばんごはん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>晚飯</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>晩ご飯に何を食べますか？</h5>
+						<h6>晚飯要吃什麼呢</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">昼（ひる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>白天 中午 午飯</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>昼に何を食べますか？</h5>
+						<h6>午飯要吃什麼呢?
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">昼ご飯（ひるごはん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>午飯</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>昼ごはんをレストランで食べます</h5>
+						<h6>午飯在餐廳吃
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">夕飯は（ゆうはん）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>晚飯</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>迎え車が来るまでに夕飯を済ませてください</h5>
+						<h6>迎接的車來之前,請讓我把飯吃完
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">塩（しお）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>鹽巴 食鹽</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>卵に塩をつけて食べました</h5>
+						<h6>蛋沾鹽巴吃
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">醬油（しょうゆ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>醬油</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>魚に醬油をつけて食べます</h5>
+						<h6>魚沾上醬油來吃
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">飴（あめ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>糖</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>この飴はおいしいです</h5>
+						<h6>這個糖果很好吃
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">卵（たまご）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>雞蛋 蛋</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>お母さんは卵を使った料理をたくさん知っています<h5>
+						<h6>媽媽知道很多種用蛋來做的料理
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">グラム</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>公克</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>二百グラムの生かきと塩を混ざながら、煮込みます</h5>
+						<h6>一邊攪拌200克的牡蠣與鹽巴,一邊燉煮
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">支度（したく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>準備</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>朝食の支度ができましたよ</h5>
+						<h6>早餐準備好了喔!
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">食べ物（たべもの）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>食物</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>買い物に行かないから食べ物がだんだん少なくなります</h5>
+						<h6>因為沒有去買東西,所以食物愈來愈少
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">八百屋（やおや）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>蔬菜店</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>やおやのお兄さんは元気がいいです</h5>
+						<h6>蔬菜店的大哥很有活力
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">厚い（あつい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>厚的 深厚的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>チーズケーキをもつと厚く切つてね</h5>
+						<h6>起司蛋糕再切厚一點喔!
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">甘い（あまい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>甜的
+						</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>弟は甘い和菓子が大好きです</h5>
+						<h6>弟弟超喜歡吃甜的日式點心
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">すつぱい</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>酸的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>すつぱいまのをたくさん食べるのは体によさそうです</h5>
+						<h6>聽說多吃酸的食物對身體有益
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">温い（ぬるい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>微溫的 不嚴厲的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>温い水と一緒に薬を飲みます</h5>
+						<h6>配溫開水吃藥
+						</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">柔らかい（やわらかい）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>軟的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>祖母は歯が悪いので、食べ物を柔らかく煮込まなければなりません</h5>
+						<h6>外婆牙齒不好,所以必須將食物煮到軟軟的
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">適当（てきとう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>適當的</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>スープを煮立ててから、適当な塩で味を調えます</h5>
+						<h6>湯煮滾後加入適當的鹽巴調味
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">残す（のこす）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>殘留 留下</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>冷蔵庫の果物を全部食べてしまつた</h5>
+						<h6>冰箱的水果通通吃完了
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">作る（つくる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>做 製作</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>紙で作った飛行機です</h5>
+						<h6>這是用紙做的飛機
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">噛む（かむ）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>咬 咀嚼</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>ご飯をよく嚙んでから食べます</h5>
+						<h6>吃飯要細嚼慢嚥
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">頂く（いただく）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>吃 喝 得到</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>私は先生に推薦状を頂来ました</h5>
+						<h6>我收到老師的推薦函
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">使う（つかう）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>使用 花費</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>お金をたくさん使いました</h5>
+						<h6>花了好多錢
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">召し上がる（めしあがる）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>[食べる]的敬語;吃</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>なにもありませんが、どうぞたくさん召し上がつてください</h5>
+						<h6>沒什麼好菜招待,請多吃一些
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">付ける（つける）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>附加 添加 抹上 安裝</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>餃子を食べるとき、しよう油を付けて食べる人が多いです</h5>
+						<h6>吃鍋貼時沾醬油吃的人很多
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 style="text-align: center;">沸かす（わかす）</h1>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>中日文一起學</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>燒熱 沸騰</h5>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6">
+						<h3>從例句學單字</h3>
+					</div>
+					<div class="col-md-6">
+						<h5>お湯を沸かして食材を入れて、そのまま煮込みます</h5>
+						<h6>煮沸開水丟進材料後悶煮
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+</body>
+
+</html>
