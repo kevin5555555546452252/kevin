@@ -10,6 +10,7 @@ body {
     background-size: 400% 400%;
     animation: moveBg 12s linear infinite;
 }
+
 @keyframes moveBg{
     0%{
         background-position: 0% 50%;

@@ -11,9 +11,9 @@
     $servername="localhost";
     $username="root";
     $password="";
-    $dbname="gg";
+    $dbname="login";
     // 创建链接
-    $conn = new mysqli($servername,$username,$password,$gg);
+    $conn = new mysqli($servername,$username,$password,$login);
     // 检测链接
     if($conn->connect_error){
         die("连接失败：".$conn->connect_error);

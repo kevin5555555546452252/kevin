@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考試紀錄</title>
+</head>
+<style>
+    tr{
+        height: 18px;
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <th>題號</th>
+            <th>成績</th>
+            <th>用時</th>
+            <th>交卷時間</th>
+        </tr>
+        
+    </table>
+    <script>
+       
+        for(var i = 0;i<100;i++){
+        var tr1 = document.createElement('tr');
+        var table = document.querySelector('table')
+        var td = document.createElement('td');
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        var td3 = document.createElement('td');
+        var tbody = document.createElement('tbody')
+        table.appendChild(tbody)
+        tbody.appendChild(tr1)
+            tr1.appendChild(td)
+            tr1.appendChild(td1)
+            tr1.appendChild(td2)
+            tr1.appendChild(td3)      
+        }
+    </script>
+</body>
+</html>

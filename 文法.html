@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -16,233 +20,528 @@
 		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
 		crossorigin="anonymous"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="turn.min.js"></script>
+	<script type="text/javascript" src="turn.min.js"></script>
 	<title></title>
 	<style type="text/css">
 		body {
-			background-color:#FFD9EC;
+			background-color: #FFD9EC;
 		}
+
 		.container {
-			background-color:	#FFFFF4;
+			background-color: #FFFFF4;
 		}
-		.one{
+
+		.one {
 			background-color: #E0E0E0;
-			border-color:#000000;
-			
+			border-color: #000000;
+
 		}
-		.two{
+
+		.two {
 			background-color: #E0E0E0;
 		}
-		.three{
+
+		.three {
 			background-color: #E0E0E0;
 		}
-		.four{
-			background-color:#E0E0E0; 
+
+		.four {
+			background-color: #E0E0E0;
 		}
-		h1{
+
+		h1 {
 			font-size: 30px;
 			text-align: center;
-			height:100px;
-			width:80px;
-			border-radius:20px;
-			background-color:blue;
-			padding-top:30px;
-			font-size:30px;
-			color:#FFFFFF;
-			margin:20px;
-			
+			height: 100px;
+			width: 80px;
+			border-radius: 20px;
+			background-color: blue;
+			padding-top: 30px;
+			font-size: 30px;
+			color: #FFFFFF;
+			margin: 20px;
+
 		}
-		h2{
-		padding-top:25px;
+
+		h2 {
+			padding-top: 25px;
 		}
-	
-		header{
+
+		header {
 			background-image: url(unnamed.jpg);
 			padding-left: 0 !important;
 			background-color: blue;
-			
+
 		}
+
 		header {
 			height: 200px;
 		}
-     	form {
-				display: none;
-			}
+
+		form {
+			display: none;
 		}
-		header{
+
+		header {
 			background-image: url(unnamed.jpg);
 		}
-		div ul li:hover{
+
+		div ul li:hover {
 			background-color: #E8FFC4;
 		}
-		footer{
+
+		footer {
 			background-color: #FFC1E0;
 			height: 100px;
 		}
-		.flipbook_IDname{
-          border-color: red;
+
+		.flipbook_IDname {
+			border-color: red;
 		}
+
 		p {
-		background-color:#C4E1FF;
-		height:100px;
+			background-color: #C4E1FF;
+			height: 100px;
 		}
-		.bluespan{
-		height:400px;
-		background-color:#DDDDFF;
-		border-color:#000000;
-        border-radius:20px; 
-        height:400px;
-        margin-top:30px;		
+
+		.bluespan {
+			height: 400px;
+			background-color: #DDDDFF;
+			border-color: #000000;
+			border-radius: 20px;
+			height: 400px;
+			margin-top: 30px;
 		}
-		
 	</style>
-	
+
 </head>
 
 <body>
-<div class="container">
-<div class="row">
+	<div class="container">
+		<div class="row">
 			<header class="col-md-12">
-				
+
 			</header>
-</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">文法篇</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">文法篇</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">單字</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div id="flipbook_IDname">
- <div class="hard">
- 	
- </div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">單字</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div id="flipbook_IDname">
+			<div class="hard">
 
- <div class="hard">
- 	
- </div>
+			</div>
 
- <div class="one border border-secondary">
- <div class="row">
- 	<h1 class="col-sm-2">1</h1>
-	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
- </div>
- <div class="row">
- 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
-形容動詞中止形連接前後句子。
-鈴木さんはきれいでやさしいです。
-鈴木小姐既漂亮又温柔。
-部屋は静かで、リビングは賑やかです。
-房間很安靜，客廳很熱鬧。
-先生が親切で、いつも先生に相談します。
-老師很親切，我總是找老師商量。</p>
-<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
- </div>
- <div class="bluespan col-sm-10 offset-sm-1"></div>	
- </div>
+			<div class="hard">
 
- <div class="two border border-secondary">
- <div class="row">
- 	<h1 class="col-sm-3">1</h1>
-	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
- </div>
- <div class="row">
- 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
-形容動詞中止形連接前後句子。
-鈴木さんはきれいでやさしいです。
-鈴木小姐既漂亮又温柔。
-部屋は静かで、リビングは賑やかです。
-房間很安靜，客廳很熱鬧。
-先生が親切で、いつも先生に相談します。
-老師很親切，我總是找老師商量。</p>
-<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
- </div>
- <div class="bluespan col-sm-10 offset-sm-1"></div>	
- </div>
+			</div>
 
- <div class="three border border-secondary">
- <div class="row">
- 	<h1 class="col-sm-3">1</h1>
-	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
- </div>
- <div class="row">
- 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
-形容動詞中止形連接前後句子。
-鈴木さんはきれいでやさしいです。
-鈴木小姐既漂亮又温柔。
-部屋は静かで、リビングは賑やかです。
-房間很安靜，客廳很熱鬧。
-先生が親切で、いつも先生に相談します。
-老師很親切，我總是找老師商量。</p>
-<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
- </div>
- <div class="bluespan col-sm-10 offset-sm-1"></div>	
- </div>
+			<div class="one border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-2">1</h1>
+					<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
+						形容動詞中止形連接前後句子。
+						鈴木さんはきれいでやさしいです。
+						鈴木小姐既漂亮又温柔。
+						部屋は静かで、リビングは賑やかです。
+						房間很安靜，客廳很熱鬧。
+						先生が親切で、いつも先生に相談します。
+						老師很親切，我總是找老師商量。</p>
+					<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
+				</div>
+				<div class="bluespan col-sm-10 offset-sm-1"></div>
+			</div>
 
- <div class="four border border-secondary">
-    <div class="row">
- 	<h1 class="col-sm-3">1</h1>
-	<h2 class="col-sm-9">「形容動詞中止形」～で～</h2>
- </div>
- <div class="row">
- 	<p class="col-sm-12">文法：形容動詞語幹 + で + 後項內容
-形容動詞中止形連接前後句子。
-鈴木さんはきれいでやさしいです。
-鈴木小姐既漂亮又温柔。
-部屋は静かで、リビングは賑やかです。
-房間很安靜，客廳很熱鬧。
-先生が親切で、いつも先生に相談します。
-老師很親切，我總是找老師商量。</p>
-<h6>形容動詞的中止形也跟名詞的中止形一樣都是「で」，要不要逗點之前也提過了，如果句子很長一般會加上逗點，短句子的話可加可不加。</h6>
- </div>
- <div class="bluespan col-sm-10 offset-sm-1"></div>
- </div>
+			<div class="two border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">2</h1>
+					<h2 class="col-sm-9">が(主語)</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">描寫眼睛看得到的 耳朵聽得到的事情</p>
+					<h6>（1）猫が鳴いています(貓在叫)（2）かぜが吹いています(風正在吹)</h6>
+				</div>
+				<div class="bluespan col-sm-10 offset-sm-1">猫が（眼前的事情)鳴いて(聽到的......主語)います
+				</div>
+			</div>
 
- <div class="hard">
- 	
- </div>
+			<div class="three border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">3</h1>
+					<h2 class="col-sm-9">が(對象)</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">が前接對象 表示好惡 需要及想得到的對象 還有能夠做的事情 明白了解的事物 以及擁有的物品</p>
+					<h6>（1）日本料理が好きです（喜歡日本料理)（2）あの人はお金があります(那個人有錢)</h6>
+				</div>
+				<div class="bluespan col-sm-10 offset-sm-1">あの人は(話題)お金が(對象)あります(能力等...擁有 好惡的對象)</div>
+			</div>
 
-</div>
-<div class="row">
-	<footer class="col-md-12">
-		
-	</footer>
-</div>
-</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">4</h1>
+					<h2 class="col-sm-9">疑問詞+が</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">が也可以當作疑問詞的主語</p>
+					<h6>（1）どつちが速いですか（哪一邊比較快呢)（2）この絵は誰か描きましたか這幅畫是誰畫的呢</h6>
+				</div>
+				<div class="bluespan col-sm-10 offset-sm-1">この絵は 誰か(疑問詞主語)描きましたか(說明...疑問詞主語)</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">5</h1>
+					<h2 class="col-sm-9">が(逆接)</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示連接兩個對立的事物 前句跟後句內容是相對立的 可譯作但是</p>
+					<h6>（1)鶏肉は食べますが牛肉は食べません(吃雞肉但不吃牛肉)（2）母は背が高いですがちちは低いです媽媽身高很高但是爸爸很矮</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">母は背が(前句)高いですが(連接良個對立的事物)ちちは低いです(後句...逆接)</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">6</h1>
+					<h2 class="col-sm-9">(目的語)を</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">を用在他動詞(人為而施加變化的動詞)的前面 表示動作的目的或對象 を前面的名詞 是動作所涉及的對象</p>
+					<h6>（1)顔を洗います(洗臉)（2）日本語の手紙を書きます(寫日文書信)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">顔を（對象)洗います(行為...行為的對象)</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">7</h1>
+					<h2 class="col-sm-9">(通過 移動)+を+自動詞</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示經過或移動的場所用助詞を 而且を後面要接自動詞 自動詞有表示功過場所的渡る(越過)曲がる(轉彎) 還有表示移動的 歩く(走)走る(跑)飛ぶ(飛)</p>
+					<h6>（1)この 角を右にまがります(在這個轉角右轉)（2）学生が道を歩いています(學生在路上走著)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">学生が道を(通過移動場所)歩いて(行為(自動詞)...經過或移動的場所)います</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">8</h1>
+					<h2 class="col-sm-9">(離開點)を</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">動作離開的場所用を 例如從家裡出來或從車 船 馬 及飛機等交通工具下來</p>
+					<h6>（1)七時に家を出ます（七點出門)（2）ここでばすをおります(在這裡下公車)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">七時に家を(離開家)出ます(行為...動作離開的場所)</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">9</h1>
+					<h2 class="col-sm-9">(場所)に</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">に表示存在的場所 表示存在的動詞有います．あります(有在)います用在自己可以動的有生命物體的人 或動物的名稱;其他 自己無法動的無生命物體名詞用あります
+					</p>
+					<h6>お風呂に入ります(去洗澡)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">お風呂に(到達點)入ります(行為...動作的到達點)</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">10</h1>
+					<h2 class="col-sm-9">(到達點)+に</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示動作移動的到達點</p>
+					<h6>お風呂に入ります(去洗澡)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">お風呂に(到達點)入ります(行為...動作的到達點)</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">11</h1>
+					<h2 class="col-sm-9">(時間)+に</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">幾點啦!星期幾啦!幾月幾號做甚麼事啦!表示動作作用的時間就用</p>
+					<h6>金曜日にトラベルします(禮拜五要去旅行)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">金曜日に(時間)トラベルします(行為...動作等的時間)</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">12</h1>
+					<h2 class="col-sm-9">(目的)+に</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示動作 作用的目的 目標可譯作去...到...</p>
+					<h6>海へ　泳ぎに　行きます(去海邊游泳)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">海へ　泳ぎに(目的)　行きます(...動作的目的)</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">13</h1>
+					<h2 class="col-sm-9">[對象(人)]+に</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示動作 作用的對象 可譯作給...跟...</p>
+					<h6>弟にメールを出しました(寄電子郵件給弟弟了)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">弟に(人 對象)メールを(事物)出しました(行為...動作的對象)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">14</h1>
+					<h2 class="col-sm-9">[時間]+に+[次數]</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示某一範圍內數量或次數</p>
+					<h6>一日に２時間ぐらい、勉強します。(一天大約念兩小時的書)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">一日に(時間)２時間ぐらい(數量 次數)、勉強します(行為...某範圍內的次數)。
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">15</h1>
+					<h2 class="col-sm-9">[場所]+で</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示動作進行的場所可譯作在...</p>
+					<h6>家でテレビを見ます(在家看電視)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">家で(場所)テレビを(對象)見ます(行為...場所)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">16</h1>
+					<h2 class="col-sm-9">[方法 手段]+で</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示用的交通工具 可譯作乘坐;動作的方法 手段可譯作用...</p>
+					<h6>鉛筆で絵を描きます(用鉛筆畫畫)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">鉛筆で(道具等)絵を描きます(行為...使用的道具手段)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">17</h1>
+					<h2 class="col-sm-9">[材料]+で</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">製作甚麼東西時 使用的材料可譯作用...</p>
+					<h6>トストでシュースを作ります(用蕃茄做果汁)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">トストで(材料)シュースを(成品)作ります(行為...使用的材料)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">18</h1>
+					<h2 class="col-sm-9">[理由]+で</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">為甚麼會這樣呢?怎麼會這樣做呢?表示原因理由可譯作因為...</p>
+					<h6>風で窓が閉まりました(窗戶被風吹開了)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">風で(原因)窓が閉まりました(結果...理由)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">19</h1>
+					<h2 class="col-sm-9">[數量]+で+[數量]</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示數量 數量的總和</p>
+					<h6>たまごは六個で300円です(雞蛋6個300日圓)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">たまごは六個で（數量)300円です(數量(總和)...數量的總和)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">20</h1>
+					<h2 class="col-sm-9">[場所 方向]へ</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">前接跟地方有關的名詞 表示動作行為的方向 同時也指行為的目的地 可譯做往...</p>
+					<h6>電車で学校へ来ました(搭電車來學校)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">電車で学校へ(目的地)来ました(行為...動作行為的方向)
+					</div>
+				</div>
+			</div>
+
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">21</h1>
+					<h2 class="col-sm-9">[場所]へ[目的]に</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示移動的場所用助詞へ表示移動的目的用助詞にに的前面要用動詞ます形 也就是把ます拿掉例如買います就變成買い</p>
+					<h6>公園へ散歩に行きます(去公園散步)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">公園へ(場所)散歩に(目的)行きます(行為...到某場所做某事)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">22</h1>
+					<h2 class="col-sm-9">[名詞]と[名詞]</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示幾個事物的並列 想要敘述的主要東西 全部都明確地舉列出來 可譯作...和... ...與... と大都與名詞相接 </p>
+					<h6>公園に猫と犬がいます(公園裡有貓有狗)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">公園に　猫と(名詞)犬が(名詞)います(行為...幾個事物的並列)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">23</h1>
+					<h2 class="col-sm-9">[對象]と（いっしょに）</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">表示一起去某事的對象と前面是一起動作的人可譯作跟...一起也可以省略いっしょに</p>
+					<h6>家族といっしょに温泉へ行きます(和家人一起去洗溫泉)</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">家族と(對象)いっしょに温泉へ 行きます(行為...一起去做某事的對象)
+					</div>
+				</div>
+			</div>
+			<div class="four border border-secondary">
+				<div class="row">
+					<h1 class="col-sm-3">24</h1>
+					<h2 class="col-sm-9">[對象]と</h2>
+				</div>
+				<div class="row">
+					<p class="col-sm-12">と前面接對象表示跟這個對象互相進行某動作如結婚吵架或偶然在哪裡碰面等等可譯作跟...</p>
+					<h6>大山さんは愛子と結婚しました(犬山先生和愛子小姐結婚了))</h6>
+					<div class="bluespan col-sm-10 offset-sm-1">大山さんは愛子と(對象)結婚しました(行為...一起去做某事的對象)
+					</div>
+				</div>
+			</div>
+	
+	<div class="four border border-secondary">
+		<div class="row">
+			<h1 class="col-sm-3">25</h1>
+			<h2 class="col-sm-9">[引用內容]と</h2>
+		</div>
+		<div class="row">
+			<p class="col-sm-12">と接在某人說的話或寫得事物後面表示說了甚麼寫了甚麼</p>
+			<h6>子供が：遊びに行きます　といっています(小孩說:好想出去玩)</h6>
+			<div class="bluespan col-sm-10 offset-sm-1">子供が：遊びに行きます(引用內容)と(引用)いって(行為...引用)います
+			</div>
+		</div>
+	</div>
+	<div class="four border border-secondary">
+		<div class="row">
+			<h1 class="col-sm-3">26</h1>
+			<h2 class="col-sm-9">...から...</h2>
+		</div>
+		<div class="row">
+			<p class="col-sm-12">表示原因理由一般用於說話人出於個人主觀理由進行請求命令希望主張及推測是比較強烈的意志性表達可譯作因為...</p>
+			<h6>忙しいから新聞を読みません(因為很忙所以不看報紙)</h6>
+			<div class="bluespan col-sm-10 offset-sm-1">忙しいから(原因)新聞を(對象)読みません(行為...原因)
+			</div>
+		</div>
+	</div>
+	<div class="four border border-secondary">
+		<div class="row">
+			<h1 class="col-sm-3">27</h1>
+			<h2 class="col-sm-9">[起點(人)]から</h2>
+		</div>
+		<div class="row">
+			<p class="col-sm-12">表使從某對象借東西從某對象聽來的消息或從某對象得到的東西から前面就是這某對象</p>
+			<h6>山田先生から時計をかりました(我向山田先生借了手錶)</h6>
+			<div class="bluespan col-sm-10 offset-sm-1">山田先生から(人)時計を(對象)かりました(行為...從某對象得某物)
+			</div>
+		</div>
+	</div>
+	<div class="four border border-secondary">
+		<div class="row">
+			<h1 class="col-sm-3">28</h1>
+			<h2 class="col-sm-9">名詞+の</h2>
+		</div>
+		<div class="row">
+			<p class="col-sm-12">這裡的準體助詞の後面可以省略出現過的名詞不需要再重複或替代該名詞可譯作...的</p>
+			<h6>その車は私のです(那輛車是我的)</h6>
+			<div class="bluespan col-sm-10 offset-sm-1">その車は(話題)私(擁有物)のです(所屬物...以の替代所屬物)
+			</div>
+		</div>
+	</div>
+	<div class="four border border-secondary">
+		<div class="row">
+			<h1 class="col-sm-3">29</h1>
+			<h2 class="col-sm-9">…は…ません</h2>
+		</div>
+		<div class="row">
+			<p class="col-sm-12">後面接否定ません表示は前面的名詞是動作行為否定的主體</h2>
+			</p>
+			<h6>太郎は肉を食べません(太郎不吃肉)</h6>
+			<div class="bluespan col-sm-10 offset-sm-1">太郎は(主體)肉を(對象)食べません(行為(否定)...否定動作或行為)
+			</div>
+		</div>
+	</div>
+	<div class="four border border-secondary">
+		<div class="row">
+			<h1 class="col-sm-3">30</h1>
+			<h2 class="col-sm-9">…は…が…は…</h2>
+		</div>
+		<div class="row">
+			<p class="col-sm-12">は除了提示主體外也可以用來區別比較兩個對立的事物也就是對照地提示兩種事物可譯作但是...</h2>
+			</p>
+			<h6>猫は外で遊びますが犬は遊びません(貓咪會在外頭玩但是狗狗不會)</h6>
+			<div class="bluespan col-sm-10 offset-sm-1">猫は(事物1)外で遊びますが犬は(事物2...比較兩個對立事物)遊びません
+			</div>
+		</div>
+	</div>
+	</div>
+
 </body>
 <script type="text/javascript">
 	$("#flipbook_IDname").turn({
-  width: 400,
-  height: 300,
-  autoCenter: true
-});
+		width: 400,
+		height: 300,
+		autoCenter: true
+	});
 	$("#flipbook_IDname").turn("page", 3);
 	$("#flipbook_IDname").turn("size", 1200, 1200);
-	$(window).resize(function(){
-    $("#flipbook_IDNAME").turn("size", window.innerWidth*0.5,window.innerHeight*0.8);
-})
+	$(window).resize(function () {
+		$("#flipbook_IDNAME").turn("size", window.innerWidth * 0.5, window.innerHeight * 0.8);
+	})
 </script>
+
 </html>
