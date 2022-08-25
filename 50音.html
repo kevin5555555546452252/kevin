@@ -323,7 +323,18 @@
     </div>
 </body>
 <script>
-    
+    var mp3s = ["音檔/あ.mp3", "音檔/い.mp3", "音檔/う.mp3", "音檔/え.mp3", "音檔/お.mp3",
+        "音檔/か.mp3", "音檔/き.mp3", "音檔/く.mp3", "音檔/け.mp3", "音檔/こ.mp3",
+        "音檔/さ.mp3", "音檔/し.mp3", "音檔/す.mp3", "音檔/せ.mp3", "音檔/そ.mp3",
+        "音檔/た.mp3", "音檔/ち.mp3", "音檔/つ.mp3", "音檔/て.mp3", "音檔/と.mp3",
+        "音檔/な.mp3", "音檔/に.mp3", "音檔/ぬ.mp3", "音檔/ね.mp3", "音檔/の.mp3",
+        "音檔/は.mp3", "音檔/ひ.mp3", "音檔/ふ.mp3", "音檔/へ.mp3", "音檔/ほ.mp3",
+        "音檔/ま.mp3", "音檔/み.mp3", "音檔/む.mp3", "音檔/め.mp3", "音檔/も.mp3",
+        "音檔/や.mp3", "音檔/ゆ.mp3", "音檔/よ.mp3", "音檔/ら.mp3", "音檔/り.mp3",
+        "音檔/る.mp3", "音檔/れ.mp3", "音檔/ろ.mp3", "音檔/わ.mp3", "音檔/ん.mp3",
+        "音檔/を.mp3"
+
+    ]
     var lis = document.querySelectorAll('.left div ul li');
     var imgs = document.querySelectorAll('img');
     for (let i = 0; i < lis.length; i++) {
@@ -333,15 +344,18 @@
             imgs[i].style.opacity = "10";
             lis[i].style.color = "#000";
             imgs[i].style.width = "100px";
-            setTimeout(function(){
-        imgs[i].style.opacity = "0";
-        imgs[i].style.width = "35px";
-            lis[i].style.color ="rgb(255, 251, 0)";
-            let flag = true
-    }, 4300);
-    
+            const audio = document.createElement("audio");
+            audio.src = mp3s[i];
+            audio.play();
+            setTimeout(function () {
+                imgs[i].style.opacity = "0";
+                imgs[i].style.width = "35px";
+                lis[i].style.color = "rgb(255, 251, 0)";
+                let flag = true
+            }, 4300);
+
         }
-        
+
     };
 
     $('.aaa2').click(function () {

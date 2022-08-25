@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -286,37 +287,42 @@
 			</header>
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">菜單篇單字</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="#">菜單篇單字</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">50音<span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">單字</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
-					</li>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+				  <li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="專題首頁.php">首頁</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="50音.html">50音</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="文法.html">文法</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  其他單字
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<li><a class="dropdown-item" href="水果.html">水果</a></li>
+						<li><a class="dropdown-item" href="交通工具.html">交通工具</a></li>
+						<li><a class="dropdown-item" href="咖啡廳.html">咖啡廳</a></li>
+						<li><a class="dropdown-item" href="臥室.HTML">臥室</a></li>
+						<li><a class="dropdown-item" href="浴室篇單字.HTML">浴室</a></li>
+						<li><a class="dropdown-item" href="菜單篇單字.html">菜單</a></li>
+						<li><a class="dropdown-item" href="廚房篇單字.html">廚房</a></li>
+						<li><a class="dropdown-item" href="客廳篇單字.html">客廳</a></li>
+						<li><a class="dropdown-item" href="職業.html">職業</a></li>
+					</ul>
+				  </li>
 				</ul>
+			  </div>
 			</div>
-		</nav>
+		  </nav>
 		<div class="row">
 			<div class="col-md-6 orange border border-secondary.text-black-50 border border-5">
 				<div class="row">

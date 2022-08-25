@@ -1,31 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>註冊</title>
-    <link rel="stylesheet" href="register.css">
-    <script src="ajax.js"></script>
-    <script src="register.js"></script>
-</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>會員註冊</title>
+    <script>
+        
+        function validateForm() {
+            var x = document.forms["registerForm"]["password"].value;
+            var y = document.forms["registerForm"]["password_check"].value;
+            if(x.length<6){
+                alert("密碼長度不足");
+                return false;
+            }
+            if (x != y) {
+                alert("請確認密碼是否輸入正確");
+                return false;
+            }
+        }
+    </script>
+    
+    </head>
 <body>
-    <div class="container">
-        <div class="login">
-            <h2>Register</h2>
-            <div class="box">
-                <div class="form-group">
-                    <label for="username">帳號</label>
-                    <input type="text" id="username">
-                </div>
-                <div class="form-group">
-                    <label for="password">密碼</label>
-                    <input type="text" id="password">
-                </div>
-                <div id="alert">測試文字</div>
-                <button id="btn">註冊</button>
-                <a href="login.html" id="register">馬上登入</a>
-            </div>
-        </div>
-    </div>
+    <h1>註冊頁面</h1>
+<form name="registerForm" method="post" action="register.php" onsubmit="return validateForm()">
+帳  號：
+    <input type="text" name="username"><br/><br/>
+密  碼：
+<input type="password" name="password" id="password"><br/><br/>
+確認密碼：
+    <input type="password" name="password_check" id="password_check"><br/><br/>
+<input type="submit" value="註冊" name="submit">
+<input type="reset" value="重設" name="submit">
+</form>
+
+
 </body>
 </html>

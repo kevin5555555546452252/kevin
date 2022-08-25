@@ -4,31 +4,37 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>ToDoList—最简单的待办事项列表</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" name="viewport" />
     <link rel="stylesheet" href="index.css">
     <script src="jquery.min.js"></script>
     <script src="tudolist.js"></script>
 </head>
-
+<style>
+    body{
+        background-color: aqua;
+    }
+</style>
 <body>
+    
     <header>
         <section>
             <label for="title">備忘錄</label>
-            <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off" />
+            <input type="text" id="title" name="title" placeholder="添加事情" required="required" autocomplete="off" />
         </section>
     </header>
+    
     <section>
-        <h2>正在进行 <span id="todocount"></span></h2>
+        <h2>正在進行 <span id="todocount"></span></h2>
         <ol id="todolist" class="demo-box">
 
         </ol>
-        <h2>已经完成 <span id="donecount"></span></h2>
+        <h2>已完成 <span id="donecount"></span></h2>
         <ul id="donelist">
 
         </ul>
     </section>
     <footer>
-        Copyright &copy; 2014 todolist.cn
+      <a href="專題首頁.php" style="font-size: 20px;">回首頁</a>
     </footer>
 
 

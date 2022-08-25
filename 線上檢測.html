@@ -38,7 +38,7 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
   if(random(1, 100) > 10){
-     alert("大於10了");
+     /* alert("大於10了"); */
   }
 
 
@@ -58,12 +58,12 @@ function random(min, max) {
     }
 
     function main() {
-        var questionArray = new Array("Q1", "Q2", "Q3", "Q4", "Q5");
+        var questionArray = new Array("Q1", "Q2", "Q3", "Q4", "Q5", "Q6");
         var resultArray = new Array();
         var rightArray = new Array();
 
         //aryAns[]是從後端返回的陣列,當點選交卷的時候,向後端請求正確答案的陣列,賦值給aryAns[]即可;
-        var aryAns = new Array(4, 3, 4, 3, 2);   //建立儲存正確答案的陣列
+        var aryAns = new Array(4, 3, 4, 3, 2, 2);   //建立儲存正確答案的陣列
         for (var i = 0; i < questionArray.length; i++) {
             if (Name(questionArray[i]) != 10) {
                 resultArray[i] = Name(questionArray[i]);
@@ -200,6 +200,14 @@ function random(min, max) {
         <input type="radio" name="Q4" value="2">長26cm，寬14cm<br>
         <input type="radio" name="Q4" value="3">長24cm，寬21cm<br> <!-- C -->
         <input type="radio" name="Q4" value="4">長24cm，寬14cm<br>
+    </p>
+    <p>5.找規律 1, 32, 81, 64, 25, ( ), 1</p>
+    <p>
+        <input type="radio" name="Q5" value="1">5
+        <input type="radio" name="Q5" value="2">6
+        <!-- B -->
+        <input type="radio" name="Q5" value="3">10
+        <input type="radio" name="Q5" value="4">12
     </p>
     <p>5.找規律 1, 32, 81, 64, 25, ( ), 1</p>
     <p>

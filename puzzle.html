@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        canvas {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="1100" height="600" id="puzzleView"></canvas>
+    <button id="startBreakBtn">開始打亂</button>
+    <button id="stopBreakBtn">停止打亂</button>
+    <button id="home">回家</button>
+
+    <script src="./easeljs.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./card.js"></script>
+</body>
+<script>
+    document.getElementById('home').addEventListener("click", function () {
+            window.location.reload = window.location.href = '專題首頁.php'
+        })
+</script>
+</html>

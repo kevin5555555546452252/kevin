@@ -2,7 +2,6 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -22,14 +21,6 @@
 	<title></title>
 
 	<style type="text/css">
-        article {
-				margin-top: 10px;
-                background-color: #FFECF5;
-                text-align: center;
-			}
-            article a {
-				font-size: 33px;
-			}    
 		body {
 			background-color: #f5f5f5;
 		}
@@ -260,7 +251,6 @@
 
 			article {
 				margin-top: 10px;
-                background-color: bisque;
 			}
 		}
 
@@ -339,9 +329,18 @@
 		}
 	</style>
 </head>
+<style type="text/css">
+  audio{
+      display: none;
+    }
+</style>
 
 <body >
-	<Embed Src="網頁用音樂檔案" Loop="True"|"Flase" AutoStart="True"|"Flase" Hidden=True|Flase>
+<audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+       src="C:\Users\kevun\Downloads\中島美嘉『雪の華』 Music Video.mp3">
+     你的瀏覽器版本太低，不支援audio標籤
+ </audio>
+	<Embed Src="" Loop="True"|"Flase" AutoStart="True"|"Flase" Hidden=True|Flase>
 	<div class="container">
 		<div class="col-md-12">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -364,14 +363,14 @@
 							<a class="nav-link" href="文法.html">文法</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="線上檢測.html">測驗</a>
+							<a class="nav-link" href="測驗.php">測驗</a>
 						</li>
 					</ul>
 					<a class="nav-item offset-sm-7">
-						<a class="" href="註冊.html">註冊</a>
+						<a class="" href="register.html">註冊</a>
 					</a>
 					<a class="nav-item offset-sm-1">
-						<a class="" href="#">登入</a>
+						<a class="" href="index.html">登出</a>
 					</a>
 				</div>
 			</nav>
@@ -386,7 +385,7 @@
 				</div>
 				<div class="nav">
 					<ul>
-						<li><a href="#" style="font-weight: bold;">歷屆題庫下載</a></li>
+						<li><a href="用戶下載.html" style="font-weight: bold;">歷屆題庫下載</a></li>
 						<li><a href="tudolist.html" style="font-weight: bold;">備忘錄</a></li>
 						<li><a href="puzzle.html" style="font-weight: bold;">輕鬆一下</a></li>
 					</ul>
@@ -395,11 +394,74 @@
 
 			</header>
 			<article class="col-md-7">
-                <a href="N4L.pdf" download="N4L.pdf">N5歷屆庫點選下載(1)</a><hr>
-				<a href="N4R.pdf" download="N4R.pdf">N5歷屆庫點選下載(2)</a><hr>
-                <a href="N5L.pdf" download="N5L.pdf">N5歷屆庫點選下載(3)</a><hr>
-                <a href="N5G.pdf" download="N5G.pdf">N5歷屆庫點選下載(4)</a><hr>
-                <a href="N5R.pdf" download="N5R.pdf">N5歷屆庫點選下載(5)</a><hr>	              
+
+				<div class="publish">
+					<div class="row">
+						<div class="big col-sm-4 pic d-none d-sm-block">
+							<a href="客廳篇單字.html":hover>
+								<img src="images/living room客廳.jpg" height="150PX;">
+								<p>客廳篇單字</p>
+							</a>
+						</div>
+						<div class="big col-sm-4 pic d-none d-sm-block ">
+							<a href="廚房篇單字.html">
+								<img src="images/kitchen廚房.jpeg" height="150PX;">
+								<p>廚房篇單字</p>
+							</a>
+						</div>
+						<div class="big col-sm-4 pic d-none d-sm-block">
+							<a href="浴室篇單字.HTML">
+								<img src="images/bathroom浴室.jfif" height="150PX;">
+								<p>浴室篇單字</p>
+							</a>
+						</div>
+					</div>
+					<div class="publish">
+						<div class="row">
+							<div class="big col-sm-4 pic d-none d-sm-block">
+								<a href="臥室.HTML">
+									<img src="images/bedroom臥室.jpg" height="150PX;">
+									<p>臥室篇單字</p>
+								</a>
+							</div>
+							<div class="big col-sm-4 pic d-none d-sm-block">
+								<a href="交通工具.html">
+									<img src="images/Transportation交通工具.jpg" height="150PX;">
+									<p>交通工具</p>
+								</a>
+							</div>
+							<div class="big col-sm-4 pic d-none d-sm-block">
+								<a href="菜單篇單字.html">
+									<img src="images/menu菜單.png" height="150PX;">
+									<p>菜單篇單字
+									</p>
+								</a>
+							</div>
+						</div>
+						<div class="publish">
+							<div class="row">
+								<div class="big col-sm-4 pic d-none d-sm-block">
+									<a href="水果.html">
+										<img src="images/Fruit stand水果.jpg" height="150PX;">
+										<p>水果攤</p>
+									</a>
+								</div>
+								<div class="big col-sm-4 pic d-none d-sm-block">
+									<a href="職業.html">
+										<img src="images/profession職業.jpg" height="150PX;">
+										<p>職業</p>
+									</a>
+								</div>
+								<div class="big col-sm-4 pic d-none d-sm-block">
+									<a href="咖啡廳.html">
+										<img src="images/Cafe咖啡廳.jpg" height="150PX;">
+										<p>咖啡廳</p>
+									</a>
+								</div>
+								
+									
+							
+               
 			</article>
 			<aside class="col-lg-3 col-sm-12">
 				<a href="https://www3.nhk.or.jp/news/" class="hot">
@@ -415,8 +477,8 @@
 				<div class="col-sm-12 vervbigdiv">
 
 					<h2 style="text-align: center; margin-top: 15px;">日檢倒數</h2>
-					<h3 style="text-align: center; margin-top: 15px;">測驗日期：2021/12/05</h3>
-					<p style="font-size: 20px; text-align: center">距離2021年第2回日檢還有…</p>
+					<h3 style="text-align: center; margin-top: 15px;">測驗日期：2022/7/3</h3>
+					<p style="font-size: 20px; text-align: center">距離2022年第2回日檢還有…</p>
 					<div id="" class=""> 
 						<div class="timebigdiv col-lg-12 col-sm-12"> 
 							<span class="day col-lg-3 col-sm-3">59</span>天
@@ -439,9 +501,9 @@
 	var hour = document.querySelector('.hour');
 	var minute = document.querySelector('.minute');
 	var second = document.querySelector('.second');
-	future = '2021-10-11 9:09:40';
+	future = '2022-7-3 9:09:40';
 	var inputtime = +new Date(future);
-	var inputtime2 = +new Date('2022-6-1 22:38:40');
+	var inputtime2 = +new Date('2023-6-1 22:38:40');
 	countDown()
 
 	var t1 = setInterval(countDown, 1000);
